@@ -1,0 +1,737 @@
+
+<!DOCTYPE html>
+<html lang="eng">
+  <head>
+    <title>NammaMess</title>
+    <link rel="icon" type="image/x-icon" href="images/Logo/favicon.ico" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./style.css" />
+    <script>
+      $(document).ready(function () {
+        $(".main-section").hide();
+        // $(".shutter-container").css("grid-gap", "0");
+        setTimeout(function () {
+          $(".shutter-container").css("grid-gap", "150vw");
+          // $(".shutter-container").css("transition", "1.5s");
+          $("#mobileLogo").css("display", "block");
+          // $(".mobile-screen").css("display", "block");
+          $(".mobile-screen-img").animate(
+            {
+              width: "300px",
+              height: "300px",
+            },
+            1000,
+            function () {
+              $(".mobile-screen").fadeIn(800);
+              $(".shutter-box").fadeOut(2000, function () {
+                $(".main-section").fadeIn(600);
+              });
+            }
+          );
+        }, 1500);
+
+        var modal = document.getElementById("exampleModal");
+
+        // Get the button that opens the modal
+        var btn = document.getElementById("btn_vid");
+
+        // When the user clicks the button, open the modal
+        btn.onclick = function () {
+          modal.style.display = "block";
+          document.getElementById("vid").play(); // <-- PLAY
+        };
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function (event) {
+          if (event.target == modal) {
+            modal.style.display = "none";
+            document.getElementById("vid").pause(); // <-- PAUSE
+          }
+        };
+      });
+    </script>
+    <style>
+      .carousel-item {
+        transition: transform 5s ease-in-out;
+      }
+      .carousel-fade .active.carousel-item-start,
+      .carousel-fade .active.carousel-item-end {
+        transition: opacity 0s 5s;
+      }
+      .shutter-container {
+        width: 150vw;
+        height: 100vh;
+        display: grid;
+        position: relative;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 150vw;
+        transform: skew(-10deg);
+        left: -25vw;
+        transition: 0.8s;
+      }
+      .shutter-container:hover {
+        grid-gap: 150vw;
+      }
+      .shutter {
+        background-color: #000;
+        color: #fff;
+        text-align: center;
+      }
+      .shutter:nth-child(even) {
+        background-color: #000;
+      }
+    </style>
+  </head>
+  <body>
+    <section class="shutter-box">
+      <div
+        class="text-center w-100"
+        id="mobileLogo"
+        style="position: absolute; display: none; top: calc(50% - 102px)"
+      >
+        <img
+          src="images/Logo/NammaMess-logo-300x300v2.gif"
+          class="mobile-screen-img"
+        />
+        <div
+          class="mobile-screen"
+          style="
+            display: none;
+            position: absolute;
+            top: calc(50% - 400px);
+            left: calc(50% - 200px);
+          "
+        ></div>
+      </div>
+      <div class="shutter-container">
+        <div class="shutter left"></div>
+        <div class="shutter right"></div>
+      </div>
+    </section>
+    <section class="main-section">
+      <div class="container-fluid main-header">
+        <nav class="py-2 navbar navbar-expand-lg auto-hiding-navbar">
+          <div class="container">
+            <div class="logo">
+              <a class="navbar-brand" href="./index.html">
+            </div>         
+            </a>
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <i class="fa-solid fa-bars"></i>
+            </button>
+            <div
+              class="collapse navbar-collapse justify-content-end home-nav"
+              id="navbarSupportedContent"
+            >
+              <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                  <a
+                    class="nav-link active"
+                    aria-current="page"
+                    href="./index.html"
+                    >Home</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="./plans.html">Plans</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="./about-us.html">About Us</a>
+                </li>
+                <!-- <li class="nav-item">
+                  <a class="nav-link" href="./features.html">Features</a>
+                </li> -->
+                <li class="nav-item call-us-nav-item">
+                  <a href="tel: 9946 66 0012" class="download-button"
+                    ><i class="fa-solid fa-phone"></i>Contact Us</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+        <!-- End Navbar -->
+        <div class="container banner-content">
+          <div class="row">
+            <div class="col-lg-5 banner-text d-none d-lg-block">
+              <h4 class="banner-text-sub">Online Mess</h4>
+              <h3 class="banner-text-main">Satisfying Breakfast</h3>
+              <h3 class="banner-text-main-head"> at your Doorstep</h3>
+              <p class="banner-text-info">
+                Why waste food, when you have a option to make a choice !
+              </p>
+              <button class="register-button">Register Now!</button>
+              <button
+                type="button"
+                class="video-button"
+                data-bs-toggle="modal"
+                data-bs-target="#exampleModal"
+                id="btn_vid"
+              >
+                <i class="fa-solid fa-video"></i> About NammaMess
+              </button>
+              <!-- Modal -->
+              <div
+                class="modal fade"
+                id="exampleModal"
+                tabindex="-1"
+                aria-labelledby="exampleModalLabel"
+                aria-hidden="true"
+              >
+                <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                    <div class="modal-body">
+                      <video
+                        width="100%"
+                        id="vid"
+                        height="100%"
+                        controls
+                        autoplay
+                      >
+                        <source
+                          src="videos/nammamess.mp4"
+                          type="video/mp4"
+                        />
+                      </video>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div
+              id="demo"
+              class="col-lg-7 banner-img carousel slide slide-fade"
+              data-bs-ride="carousel"
+              data-bs-pause="false"
+            >
+              <!-- The slideshow/carousel -->
+              <div class="carousel-inner">
+                <div class="carousel-item active" data-bs-interval="4000" data-bs-delay="1000">
+                  <img
+                    src="images/banners/puttu-kadala.png"
+                    alt="Breakfast"
+                    class="d-block"
+                  />
+                </div>
+                <div class="carousel-item" data-bs-interval="4000">
+                  <img
+                    src="images/banners/masala-dosa.png"
+                    alt="Lunch"
+                    class="d-block"
+                  />
+                </div>
+                <div class="carousel-item" data-bs-interval="4000">
+                  <img
+                    src="images/banners/idlivada.png"
+                    alt="Snacks"
+                    class="d-block"
+                  />
+                </div>
+                <div class="carousel-item" data-bs-interval="4000">
+                  <img
+                    src="images/banners/Mess-Banners4.png"
+                    alt="Dinner"
+                    class="d-block"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-5 banner-text d-block d-lg-none">
+              <h4 class="banner-text-sub">Online Mess</h4>
+              <h3 class="banner-text-main">Satisfying Breakfast</h3>
+              <h3 class="banner-text-main-head">at your Doorstep</h3>
+              <p class="banner-text-info">
+                Why waste food, when you have a option to make a choice !
+              </p>
+              <div class="d-flex">
+                <button class="register-button">Register Now!</button>
+                <button
+                  type="button"
+                  class="video-button watch-button-mobile"
+                  data-bs-toggle="modal"
+                  data-bs-target="#exampleModal"
+                  id="btn_vid"
+                >
+                  <i class="fa-solid fa-video"></i> About NammaMess
+                </button>
+              </div>
+              <!-- Modal -->
+              <div
+                class="modal fade"
+                id="exampleModal"
+                tabindex="-1"
+                aria-labelledby="exampleModalLabel"
+                aria-hidden="true"
+              >
+                <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                    <div class="modal-body">
+                      <video
+                        width="100%"
+                        id="vid"
+                        height="100%"
+                        controls
+                        autoplay
+                        muted
+                      >
+                        <source
+                          src="videos/nammamess.mp4"
+                          type="video/mp4"
+                        />
+                      </video>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <section class="howwework">
+        <div class="container how-work">
+          <div class="how-work-text">
+            <h3 class="how-work-head">How we work</h3>
+            <h3 class="how-work-sub-head">Have your preferred breakfast and pay nothing more!</h3>
+            <p class="how-work-info">
+              
+            </p>
+          </div>
+          <div class="row pt-5 how-work-content">
+            <div class="col-lg-4">
+              <img src="images/icon1.png" class="how-work-img" />
+              <h4 class="how-work-item-head">Select your food preferrence</h4>
+              <p class="how-work-desc">
+                From the set of options select your preferred food.
+              </p>
+            </div>
+            <div class="col-lg-4">
+              <img src="images/icon2.png" class="how-work-img" />
+              <h4 class="how-work-item-head">Timely Delivery</h4>
+              <p class="how-work-desc">
+                Food will be delivered on-time.
+              </p>
+            </div>
+            <div class="col-lg-4">
+              <img src="images/icon3.png" class="how-work-img" />
+              <h4 class="how-work-item-head">Best Quality</h4>
+              <p class="how-work-desc">
+                We are here to solve your cravings for homely food.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="ourplan">
+        <div class="container our-plan">
+          <div class="our-plan-text">
+            <h3 class="about-us-head">Our</h3>
+            <h3 class="about-us-sub-head">Food Plan</h3>
+          </div>
+          <div class="row food-plan-row-1">
+            <div class="col-lg-6 food-plan-1">
+              <div class="food-plan-details">
+                <h3 class="food-plan-rate">1,500</h3>
+                <h3 class="food-plan-month">Per Month</h3>
+                <ul class="food-plan-ul">
+                  <li>5 veg days</li>
+                  <li>2 nonveg days</li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-lg-6 food-plan-2">
+              <div class="food-plan-details">
+                <h3 class="food-plan-rate">4,500</h3>
+                <h3 class="food-plan-month">Per Month</h3>
+                <ul class="food-plan-ul">
+                  <li>4 veg days</li>
+                  <li>3 nonveg days</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="row food-plan-row-2">
+            <div class="col-lg-6 food-plan-3">
+              <div class="food-plan-details">
+                <h3 class="food-plan-rate">4,500</h3>
+                <h3 class="food-plan-month">Per Month</h3>
+                <ul class="food-plan-ul">
+                  <li>2 veg days</li>
+                  <li>5 nonveg days</li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-lg-6 food-plan-4">
+              <div class="food-plan-details">
+                <h3 class="food-plan-rate">Customise</h3>
+                <h3 class="customise">
+                  <i class="fa-solid fa-circle-plus"></i>
+                </h3>
+                <ul class="food-plan-ul">
+                  <li>Diet Plans</li>
+                  <li>Other Plans</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="aboutus">
+        <div class="container about-us">
+          <div class="row">
+            <div class="col-lg-6">
+              <img src="images/Delivery-boy.png" />
+            </div>
+            <div class="col-lg-6">
+              <div class="about-us-text">
+                <h3 class="about-us-head">About</h3>
+                <h3 class="about-us-sub-head">NammaMess</h3>
+                <p class="about-us-content-1">
+                  NammaMess is an online food delivery app which provides 3
+                  meals of the day, viz, Breakfast, Lunch and Dinner to
+                  customers daily throughout the month with a pre-paid
+                  subscription plan.
+                </p>
+                <!-- <p class="about-us-content-2">
+                  NammaMess in coordination with the local Government
+                  authorities, will be taking part of the State Government’s
+                  Community Kitchen’ scheme.
+                </p> -->
+                <div class="about-app-img d-flex justify-content-between">
+                  <div class="">
+                    <img src="images/Google-Play.png" />
+                  </div>
+                  <div class="">
+                    <img src="images/App-Store.png" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- <section class="foodcategories">
+        <div class="container food-categories">
+          <div class="food-categories-text">
+            <h3 class="about-us-sub-head">
+              <span class="about-us-head">Food</span> Categories
+            </h3>
+          </div>
+          <div class="food-categories-content">
+            <div class="row justify-content-center">
+              <div class="col-md-6 col-lg-4">
+                <div class="food-category">
+                  <div class="food-category-name">
+                    Break fast<i
+                      class="fa-regular fa-circle-right category-icon"
+                    ></i>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 col-lg-4">
+                <div class="food-category">
+                  <div class="food-category-name">
+                    Lunch<i
+                      class="fa-regular fa-circle-right category-icon"
+                    ></i>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 col-lg-4">
+                <div class="food-category">
+                  <div class="food-category-name">
+                    Dinner<i
+                      class="fa-regular fa-circle-right category-icon"
+                    ></i>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 col-lg-4">
+                <div class="food-category">
+                  <div class="food-category-name">
+                    Snacks<i
+                      class="fa-regular fa-circle-right category-icon"
+                    ></i>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 col-lg-4">
+                <div class="food-category">
+                  <div class="food-category-name">
+                    Juices<i
+                      class="fa-regular fa-circle-right category-icon"
+                    ></i>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 col-lg-4">
+                <div class="food-category">
+                  <div class="food-category-name">
+                    Beverages<i
+                      class="fa-regular fa-circle-right category-icon"
+                    ></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section> -->
+      <!-- <section class="mobileapp">
+        <div class="mobile-app">
+          <div class="container">
+            <div class="mobile-app-text">
+              <h3 class="mobile-app-main-head">NammaMess</h3>
+              <h3 class="mobile-app-head">We Care for Your Nutrition.</h3>
+              <h3 class="mobile-app-sub-head">Just like your Mother.</h3>
+              <p class="mobile-app-desc">
+                Say no to untimely eating schedule with NammaMess’s scheduled
+                and healthy food delivery
+              </p>
+              <button class="mobile-app-button">
+                <i class="fa fa-circle-arrow-down"></i>Download App
+              </button>
+            </div>
+          </div>
+        </div>
+      </section> -->
+      <!-- <section class="tensionfree">
+        <div class="container tension-free">
+          <div class="row tension-free-content">
+            <div class="col-lg-5 tension-free-text">
+              <h3 class="tension-free-head">BE TENSION FREE!</h3>
+              <h5 class="tension-free-sub-head">On-Time Delivery</h5>
+              <p class="tension-free-desc">
+                You have an option to edit the delivery time that suits your
+                schedule. Our fast delivery system will take care of all your
+                need.
+              </p>
+              <ul class="tension-free-ul">
+                <li>Free Delivery</li>
+                <li>Well Wrapped</li>
+                <li>Choose Your Delivery Time</li>
+              </ul>
+            </div>
+            <div class="col-lg-7 tension-free-img">
+              <img src="images/be-tension-free-img.png" />
+            </div>
+          </div>
+        </div>
+      </section> -->
+      <!-- <section class="whychooseus">
+        <div class="container why-choose-us">
+          <div class="why-choose-us-text">
+            <h3>
+              <span class="why-choose-us-head">Why</span>
+              <span class="why-choose-us-head-bold">Choose Us</span>
+            </h3>
+            <h6 class="why-choose-us-sub-head">
+              The best food for you at affordable prices
+            </h6>
+          </div>
+          <div class="why-choose-us-content">
+            <div class="row why-choose-us-content-row-1">
+              <div class="col-lg-4">
+                <img src="images/feature-img-1.png" />
+                <h3 class="why-choose-item-name">Personalized Plan</h3>
+                <p class="why-choose-item-desc">
+                  With our wide Menu and Affordable prices, you can personalize
+                  your order.
+                </p>
+              </div>
+              <div class="col-lg-4">
+                <img src="images/feature-img-2.png" />
+                <h3 class="why-choose-item-name">Free and on-time Delivery</h3>
+                <p class="why-choose-item-desc">
+                  Free delivery services at your doorstep. Choose the time and
+                  place of your food delivery.
+                </p>
+              </div>
+              <div class="col-lg-4">
+                <img src="images/feature-img-3.png" />
+                <h3 class="why-choose-item-name">
+                  Hygienic and Safe Packaging
+                </h3>
+                <p class="why-choose-item-desc">
+                  Each food item will have proper packaging to secure the
+                  delicacy of the food.
+                </p>
+              </div>
+            </div>
+            <div class="row why-choose-us-content-row-2">
+              <div class="col-lg-4">
+                <img src="images/feature-img-4.png" />
+                <h3 class="why-choose-item-name">Add-ons Facility</h3>
+                <p class="why-choose-item-desc">
+                  With NammaMess’s monthly subscription, add delicious dishes to
+                  the main menu, as per mood.
+                </p>
+              </div>
+              <div class="col-lg-4">
+                <img src="images/feature-img-5.png" />
+                <h3 class="why-choose-item-name">Meals for the Day</h3>
+                <p class="why-choose-item-desc">
+                  A single stop for your daily food requirements.
+                </p>
+              </div>
+              <div class="col-lg-4">
+                <img src="images/feature-img-6.png" />
+                <h3 class="why-choose-item-name">Easy Regulation with App</h3>
+                <p class="why-choose-item-desc">
+                  Track your orders and subscription with our easy-to-use mobile
+                  app.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section> -->
+      <section class="footer">
+        <div class="container">
+          <div class="footer-box">
+            <div class="row footer-social">
+              <div class="col-lg-6">
+                <div class="connected">
+                  <div class="social-icons">
+                    <span class="social-icons-head">Stay Connected</span>
+                    <a href=""><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href=""><i class="fab fa-twitter"></i></a>
+                    <a
+                      target="_blank"
+                      href="https://www.instagram.com/NammaMess/?igshid=YWJhMjlhZTc%3D"
+                      ><i class="fab fa-instagram"></i
+                    ></a>
+                    <a href=""><i class="fa-brands fa-linkedin-in"></i></a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-6 subscribe-container">
+                <input type="text" placeholder="Name" />
+                <input type="number" placeholder="Mobile" />
+                <button>
+                  Subscribe <i class="fa-regular fa-circle-right"></i>
+                </button>
+              </div>
+            </div>
+            <div class="row footer-address">
+              <div class="col-lg-6">
+                <div class="address d-flex text-white">
+                  <img src="images/Logo/NammaMess_logo.svg" height="125px" />
+                  <div class="mx-4">
+                    <h4>Enjoy your</h4>
+                    <h4 class="text-yellow mb-4">Delicious Food</h4>
+                    <div class="contact-text">
+                      <span class="mail-icon"
+                        ><i class="fa-solid fa-envelope"></i></span
+                      >support@NammaMess.com
+                    </div>
+                    <div class="contact-text">
+                      <span class="phone-icon"
+                        ><img src="./images/callus.png" alt="" /></span
+                      >9946 66 0012
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-6 col-lg-3">
+                <div class="quicklinks">
+                  <h3 class="quick-links-head">Quick Links</h3>
+                  <ul class="quick-links">
+                    <li>
+                      <a
+                        class="nav-link active"
+                        aria-current="page"
+                        href="./index.html"
+                        >Home</a
+                      >
+                    </li>
+                    <li>
+                      <a class="nav-link" href="./about-us.html">About Us</a>
+                    </li>
+                    <li>
+                      <a class="nav-link" href="./features.html">Features</a>
+                    </li>
+                    <li><a class="nav-link" href="./plans.html">Plans</a></li>
+                    <li>
+                      <a class="nav-link active" href="./privacy-policy.html"
+                        >Privacy Policy</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        class="nav-link active"
+                        href="./cancellation-policy.html"
+                        >Cancellation Policy</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        class="nav-link active"
+                        href="./terms-and-condition.html"
+                        >Terms & Condition</a
+                      >
+                    </li>
+                    <li>
+                      <a class="nav-link active" href="./support.html"
+                        >Support</a
+                      >
+                    </li>
+                    <li>
+                      <a class="nav-link active" href="./contact-us.html"
+                        >Contact Us</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-6 col-lg-3">
+                <div class="features">
+                  <h3 class="features-head">Features</h3>
+                  <ul>
+                    <li>Personalized Plan</li>
+                    <li>Free and on-time Delivery</li>
+                    <li>Hygienic and Safe Packaging</li>
+                    <li>Add-ons Facility</li>
+                    <li>Meals for the Day</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="copyright">
+            <div>Copyright &copy; 2022. NammaMess. All rights reserved.</div>
+            <!-- <div>
+                            Designed by LogicSky.
+                        </div> -->
+          </div>
+        </div>
+      </section>
+    </section>
+    <div class="whatsapp-widget">
+      <a href="https://api.whatsapp.com/send?phone=8304917517" target="_blank">
+        <img src="images/whatsapp-logo.png" alt="WhatsApp" />
+    
+      </a>
+    </div>
+  </body>
+</html>
+
