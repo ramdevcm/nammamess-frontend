@@ -48,23 +48,23 @@
       // Get the Breakfast category element
       var foodCategory = document.getElementById("food-categories");
 
-  // Get all card elements you want to toggle
-  var cardElements = document.querySelectorAll(".card");
+      // Get all card elements you want to toggle
+      var cardElements = document.querySelectorAll(".card");
 
-  // Flag to keep track of card visibility
-  var cardsVisible = true;
+      // Flag to keep track of card visibility
+      var cardsVisible = true;
 
-  // Add a click event listener to the Breakfast category element
-  foodCategory.addEventListener("click", function () {
-    // Toggle the visibility of card elements
-    cardElements.forEach(function (card) {
-      card.style.display = cardsVisible ? "none" : "block";
+      // Add a click event listener to the Breakfast category element
+      foodCategory.addEventListener("click", function () {
+        // Toggle the visibility of card elements
+        cardElements.forEach(function (card) {
+          card.style.display = cardsVisible ? "none" : "block";
+        });
+
+        // Update the flag to the opposite state
+        cardsVisible = !cardsVisible;
+      });
     });
-
-    // Update the flag to the opposite state
-    cardsVisible = !cardsVisible;
-  });
-});
 
   </script>
 </head>
@@ -183,7 +183,7 @@
   </section>
 
   <div class="container">
-    <section class="mb-10 text-center">
+    <section class="mb-6 text-center">
       <div class="row gx-lg-5">
 
         <!-- First column -->
@@ -287,7 +287,6 @@
 
     </section>
   </div>
-  </main>
 
   <section class="footer">
     <div class="container">
