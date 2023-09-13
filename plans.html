@@ -42,6 +42,31 @@
       };
     });
   </script>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      // Get the Breakfast category element
+      var foodCategory = document.getElementById("food-categories");
+
+  // Get all card elements you want to toggle
+  var cardElements = document.querySelectorAll(".card");
+
+  // Flag to keep track of card visibility
+  var cardsVisible = true;
+
+  // Add a click event listener to the Breakfast category element
+  foodCategory.addEventListener("click", function () {
+    // Toggle the visibility of card elements
+    cardElements.forEach(function (card) {
+      card.style.display = cardsVisible ? "none" : "block";
+    });
+
+    // Update the flag to the opposite state
+    cardsVisible = !cardsVisible;
+  });
+});
+
+  </script>
 </head>
 
 <body>
@@ -49,7 +74,7 @@
     <nav class="py-2 navbar navbar-expand-lg auto-hiding-navbar">
       <div class="container">
         <a class="navbar-brand" href="./index.html">
-          <img class="logo" src="images/Logo//NammaMess-red-logo.svg" />
+          <img class="logo" src="images/Logo/NammaMess-red-logo.svg" />
         </a>
         <button class="navbar-toggler text-dark" type="button" data-bs-toggle="collapse"
           data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
@@ -120,58 +145,7 @@
       </div>
     </div>
   </section>
-  <!-- <section class="ourplan">
-      <div class="container our-plan">
-        <div class="our-plan-text">
-          <h3 class="about-us-head">Our</h3>
-          <h3 class="about-us-sub-head">Food Plan</h3>
-        </div>
-        <div class="row food-plan-row-1">
-          <div class="col-lg-6 food-plan-1">
-            <div class="food-plan-details">
-              <h3 class="food-plan-rate">3,999</h3>
-              <h3 class="food-plan-month">Per Month</h3>
-              <ul class="food-plan-ul">
-                <li>5 veg days</li>
-                <li>2 nonveg days</li>
-              </ul>
-            </div>
-          </div>
-          <div class="col-lg-6 food-plan-2">
-            <div class="food-plan-details">
-              <h3 class="food-plan-rate">4,500</h3>
-              <h3 class="food-plan-month">Per Month</h3>
-              <ul class="food-plan-ul">
-                <li>4 veg days</li>
-                <li>3 nonveg days</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <div class="row food-plan-row-2">
-          <div class="col-lg-6 food-plan-3">
-            <div class="food-plan-details">
-              <h3 class="food-plan-rate">4,500</h3>
-              <h3 class="food-plan-month">Per Month</h3>
-              <ul class="food-plan-ul">
-                <li>2 veg days</li>
-                <li>5 nonveg days</li>
-              </ul>
-            </div>
-          </div>
-          <div class="col-lg-6 food-plan-4">
-            <div class="food-plan-details">
-              <h3 class="food-plan-rate">Customise</h3>
-              <h3 class="customise"><i class="fa-solid fa-circle-plus"></i></h3>
-              <ul class="food-plan-ul">
-                <li>Diet Plans</li>
-                <li>Other Plans</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section> -->
+
 
   <section class="foodcategories">
     <div class="container food-categories">
@@ -184,93 +158,29 @@
         <div class="row justify-content-center">
           <div class="col-md-6 col-lg-4">
             <div class="food-category">
-              <div class="food-category-name">
+              <div class="food-category-name" id="food-categories">
                 Break fast<i class="fa-regular fa-circle-down  category-icon"></i>
               </div>
             </div>
           </div>
           <div class="col-md-6 col-lg-4">
             <div class="food-category">
-              <div class="food-category-name">
+              <div class="food-category-name" id="food-categories">
                 Lunch<i class="fa-regular fa-circle-down  category-icon"></i>
               </div>
             </div>
           </div>
           <div class="col-md-6 col-lg-4">
-            <div class="food-category">
+            <div class="food-category" id="food-categories">
               <div class="food-category-name">
                 Dinner<i class="fa-regular fa-circle-down  category-icon"></i>
               </div>
             </div>
           </div>
-          <!-- <div class="col-md-6 col-lg-4">
-              <div class="food-category">
-                <div class="food-category-name">
-                  Snacks<i class="fa-regular fa-circle-down  category-icon"></i>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-6 col-lg-4">
-              <div class="food-category">
-                <div class="food-category-name">
-                  Juices<i class="fa-regular fa-circle-down  category-icon"></i>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-6 col-lg-4">
-              <div class="food-category">
-                <div class="food-category-name">
-                  Beverages<i
-                    class="fa-regular fa-circle-down  category-icon"
-                  ></i>
-                </div>
-              </div>
-            </div> -->
         </div>
       </div>
     </div>
   </section>
-  <!-- <section class="mobileapp">
-      <div class="mobile-app">
-        <div class="container">
-          <div class="mobile-app-text">
-            <h3 class="mobile-app-main-head">NammaMess</h3>
-            <h3 class="mobile-app-head">We Care for Your Nutrition.</h3>
-            <h3 class="mobile-app-sub-head">Just like your Mother.</h3>
-            <p class="mobile-app-desc">
-              Say no to untimely eating schedule with NammaMess’s scheduled and
-              healthy food delivery
-            </p>
-            <button class="mobile-app-button">
-              <i class="fa fa-circle-arrow-down"></i>Download App
-            </button>
-          </div>
-        </div>
-      </div>
-    </section> -->
-  <!-- <section class="tensionfree">
-      <div class="container tension-free">
-        <div class="row tension-free-content">
-          <div class="col-lg-5 tension-free-text">
-            <h3 class="tension-free-head">BE TENSION FREE!</h3>
-            <h5 class="tension-free-sub-head">On-Time Delivery</h5>
-            <p class="tension-free-desc">
-              You have an option to edit the delivery time that suits your
-              schedule. Our fast delivery system will take care of all your
-              need.
-            </p>
-            <ul class="tension-free-ul">
-              <li>Free Delivery</li>
-              <li>Well Wrapped</li>
-              <li>Choose Your Delivery Time</li>
-            </ul>
-          </div>
-          <div class="col-lg-7 tension-free-img">
-            <img src="images/be-tension-free-img.png" />
-          </div>
-        </div>
-      </div>
-    </section> -->
 
   <div class="container">
     <section class="mb-10 text-center">
@@ -291,12 +201,21 @@
             <div class="card-body">
               <h5 class="card-title">Breakfast</h5>
               <p class="text-muted">
-                <small>"Breakfast is like a gentle hug for your stomach</small>
+                <small>"Breakfast is like a gentle hug for your stomach"</small>
               </p>
               <p class="card-text">
-                Homely cooked food with xxxxxxxxxxxxxx
+                "Start your day right with our delicious breakfast from NammaMess.
+                Our menu offers a variety of options to fuel your morning, from wholesome dosas to hearty omelets.
+                Join us and kickstart your day with a nutritious and satisfying meal."
               </p>
-              <a href="#!" class="btn btn-secondary btn-rounded">Read more</a>
+              <p class="card-text-blocks">
+                ₹50/Day
+              </p>
+              <p class="card-text-blocks">
+                ₹1500/Month
+              </p>
+              <a href="https://api.whatsapp.com/send?phone=8304917517" target="_blank"
+                class="btn btn-primary btn-rounded btn-bg-green">Book your slot now</a>
             </div>
           </div>
 
@@ -320,11 +239,14 @@
                 <small>"The only way to get rid of a temptation is to yield to it"</small>
               </p>
               <p class="card-text">
-                Suspendisse in volutpat massa. Nulla facilisi. Sed aliquet
-                diam orci, nec ornare metus semper sed. Integer volutpat
-                ornare erat sit amet rutrum. Ut vulputate est non quam.
+                "Get ready for a delightful lunch experience coming your way soon!
+                Our culinary team is preparing a mouthwatering spread of dishes that will tantalize your taste buds.
+                From savory entrees to delectable desserts, we've got a treat in store for you.
+                Join us shortly to savor a wholesome and satisfying midday meal that promises to energize your day.
+                Stay tuned for the deliciousness about to unfold!"
               </p>
-              <a href="#!" class="btn btn-secondary btn-rounded">Read more</a>
+              <a href="https://api.whatsapp.com/send?phone=8304917517" target="_blank"
+                class="btn btn-primary btn-rounded btn-bg-green">Connect with us</a>
             </div>
           </div>
 
@@ -346,11 +268,14 @@
                 <small>"Dinner with a view, what more could I ask for?"</small>
               </p>
               <p class="card-text">
-                Curabitur tristique, mi a mollis sagittis, metus felis mattis
-                arcu, non vehicula nisl dui quis diam. Mauris ut risus eget
-                massa volutpat feugiat. Donec.
+                "Get ready for a delightful dining experience with a diverse menu that caters to all tastes.
+                Whether you're craving comfort food or exploring new culinary delights, our evening offerings will
+                satisfy your palate. Join us for dinner and create cherished moments with family and friends.
+                Stay tuned for the official launch date, and we look forward to serving you delicious dinners in the
+                near future!"
               </p>
-              <a href="#!" class="btn btn-secondary btn-rounded">Read more</a>
+              <a href="https://api.whatsapp.com/send?phone=8304917517" target="_blank"
+                class="btn btn-primary btn-rounded btn-bg-green">Connect with us</a>
             </div>
           </div>
 

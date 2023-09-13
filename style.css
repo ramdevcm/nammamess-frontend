@@ -413,7 +413,7 @@ nav .home-nav ul li a.nav-link:hover {
   padding: 0 5px;
 }
 .food-category:hover {
-  background: linear-gradient(to top, #8b0d0d 20%, #d93a3f);
+  background: linear-gradient(to top, #ff6702 20%, #d46124);
   color: #fff;
   cursor: pointer;
 }
@@ -818,9 +818,23 @@ input[type="number"] {
 }
 /* End WhatsApp Widget Styles */
 
-  
-  /* Adjust the styles as needed */
-  
+.card-text-blocks {
+ position: relative;
+ width: 50px;
+ color: #8b0d0d;
+ display: grid;
+ font-family: 'Lora', serif;
+ font-size: 3vh;
+}
+.btn-bg-green {
+  background-color: #ff9900;
+}
+
+.card {
+  /* Add a transition for opacity */
+  transition: opacity 0.3s ease-in-out;
+}
+
 
 @media screen and (max-width: 1500px) {
   .mobile-app {
