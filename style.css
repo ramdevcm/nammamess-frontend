@@ -45,7 +45,7 @@ body {
   background-image: url(images/Main-Background.jpeg);
   min-height: 100vh;
   background-repeat: no-repeat;
-  background-size: auto;
+  background-size: cover;
 }
 .main-header-special {
   background-color: #ffffff;
@@ -65,9 +65,9 @@ body {
 nav ul li a.nav-link {
   text-align: right;
   color: #fff;
-  font-size: 15px;
+  font-size: 20px;
   margin: auto 18px;
-  font-family: "Montserrat-Medium";
+  font-family: "Lora";
 }
 
 nav ul.navbar-nav li a.nav-link.active {
@@ -98,9 +98,9 @@ nav .home-nav ul li a.nav-link:hover {
 .main-header-special nav ul li a.nav-link {
   text-align: right;
   color: rgb(0, 0, 0);
-  font-size: 15px;
+  font-size: 20px;
   margin: auto 18px;
-  font-family: "Montserrat-Medium";
+  font-family: "Lora";
 }
 .main-header-special nav ul.navbar-nav li a.nav-link.active {
   color: #d93a3f;
@@ -863,7 +863,7 @@ input[type="number"] {
   }
   nav ul li a.nav-link,
   .main-header-special nav ul li a.nav-link {
-    font-size: 18px;
+    font-size: 20px;
     text-align: left;
   }
   nav ul.navbar-nav li a.nav-link.active::after,
