@@ -37,12 +37,14 @@ body {
 .logo {
   height: 150px;
   width: 150px;
-  background-image: url(images/Logo/NammaMess_logo.svg);
+  background-image: url(images/Logo/NammaMess-red-logo.svg);
   background-repeat: no-repeat;
   background-size: cover;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 .main-header {
-  background-image: url(images/Main-Background.jpeg);
+  /* background-image: url(images/Main-Background.jpeg); */
+  background-color: rgb(255, 255, 255);
   min-height: 100vh;
   background-repeat: no-repeat;
   background-size: cover;
@@ -64,17 +66,17 @@ body {
 }
 nav ul li a.nav-link {
   text-align: right;
-  color: #fff;
+  color: #000000;
   font-size: 20px;
   margin: auto 18px;
   font-family: "Lora";
 }
 
 nav ul.navbar-nav li a.nav-link.active {
-  color: #d93a3f;
+  color: rgb(253,79,92);
 }
 nav .home-nav ul.navbar-nav li a.nav-link.active {
-  color: #f6cb00;
+  color: rgb(253,79,92);
 }
 nav ul.navbar-nav li a.nav-link.active::after {
   content: "";
@@ -87,7 +89,7 @@ nav ul.navbar-nav li a.nav-link.active::after {
   margin-top: 3px;
 }
 nav .home-nav ul.navbar-nav li a.nav-link.active::after {
-  background: #f6cb00;
+  background: rgb(253,79,92);
 }
 nav ul li a.nav-link:hover {
   color: #d93a3f;
@@ -168,12 +170,12 @@ nav .home-nav ul li a.nav-link:hover {
   transform: translate3d(0, 0, 0);
 }
 .banner-text-sub {
-  color: #fff;
+  color: #000000;
   font-family: "Montserrat-Bold";
   font-size: 34px;
 }
 .banner-text-main {
-  color: #fff;
+  color: #000000;
   font-family: "Montserrat-Bold";
   font-size: 60px;
 }
@@ -183,7 +185,7 @@ nav .home-nav ul li a.nav-link:hover {
   font-size: 58px;
 }
 .banner-text-info {
-  color: #fff;
+  color: rgb(253,79,92);
   font-family: "Montserrat-Regular";
   font-size: 18px;
 }
@@ -201,12 +203,13 @@ nav .home-nav ul li a.nav-link:hover {
 .video-button {
   margin-top: 10px;
   border: none;
-  border-radius: 14px;
-  background-color: #f6cb00;
-  color: #000;
+  border-radius: 10px;
+  background-color: rgb(253,79,92);
+  color: #ffffff;
   padding: 8px 14px;
   font-family: "Montserrat-Bold";
   font-size: 16px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.5);
 }
 .banner-img {
   background: url("") center no-repeat;
@@ -214,8 +217,8 @@ nav .home-nav ul li a.nav-link:hover {
 }
 .banner-img img {
   display: block;
-  max-width: 100%;
-  max-height: 88%;
+  width: 100%;
+  height: 100%;
   margin: 0px;
   padding-top: 52px;
 }
@@ -701,7 +704,7 @@ ul.quick-links,
 .download-button {
   border: none;
   color: #000;
-  background: #f6cb00;
+  background: rgb(253,79,92);
   padding: 5px 12px;
   border-radius: 50px;
   font-weight: 600;
@@ -711,7 +714,7 @@ ul.quick-links,
 .subscribe-container button:hover,
 .download-button:hover {
   color: #fff;
-  background: #d93a3f;
+  background: #47d93a;
 }
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
@@ -771,7 +774,7 @@ input[type="number"] {
   padding-left: 12px;
 }
 .navbar-toggler {
-  color: #fffeeb;
+  color: rgb(253,79,92);
   font-size: 30px;
   outline: none;
   border: none;
@@ -830,11 +833,212 @@ input[type="number"] {
   background-color: #ff9900;
 }
 
-.card {
+.cards {
   /* Add a transition for opacity */
   transition: opacity 0.3s ease-in-out;
 }
 
+.food-demo-slider {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  padding: 2rem 0; /* Adjust padding as needed */
+}
+
+/* Adjust the slide width and height for larger screens */
+.food-demo-slide {
+  width: 80%; /* Adjust as needed */
+  max-width: 37rem; /* Adjust as needed */
+  height: 42rem; /* Adjust as needed */
+  position: relative;
+  margin: 0 auto;
+}
+
+/* Adjust slide dimensions for medium-sized screens */
+@media (max-width: 768px) {
+  .food-demo-slide {
+    width: 90%; /* Adjust for medium screens */
+    max-width: none;
+    height: auto;
+  }
+}
+
+/* Adjust slide dimensions for smaller screens */
+@media (max-width: 500px) {
+  .food-demo-slide {
+    width: 100%; /* Adjust for small screens */
+    height: auto;
+  }
+}
+
+.text-center {
+  text-align: center;
+}
+
+.section-heading {
+  font-size: 3rem;
+  color: var(--primary);
+  padding: 2rem 0;
+}
+
+#food-demo {
+  padding: 4rem 0;
+}
+
+@media (max-width:1440px) {
+  #food-demo {
+    padding: 7rem 0;
+  }
+}
+
+#food-demo .food-demo-slider {
+  height: 52rem;
+  padding: 2rem 0;
+  position: relative;
+}
+
+@media (max-width:500px) {
+  #food-demo .food-demo-slider {
+    height: 45rem;
+  }
+}
+
+.food-demo-slide {
+  width: 37rem;
+  height: 42rem;
+  position: relative;
+}
+.food-demo-slide .food-demo-slide-img img {
+  width: 37rem;
+  height: 42rem;
+  border-radius: 2rem;
+  object-fit: cover;
+}
+
+.food-demo-slide .food-demo-slide-content {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.food-demo-slide-content .food-price {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  color: var(--white);
+}
+
+.food-demo-slide-content .food-demo-slide-content-bottom {
+  position: absolute;
+  bottom: 2rem;
+  left: 2rem;
+  color: var(--white);
+}
+
+.food-rating {
+  padding-top: 1rem;
+  display: flex;
+  gap: 1rem;
+}
+
+.rating ion-icon {
+  color: var(--primary);
+}
+
+.swiper-slide-shadow-left,
+.swiper-slide-shadow-right {
+  display: none;
+}
+
+.food-demo-slider-control {
+  position: relative;
+  bottom: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.food-demo-slider-control .swiper-button-next {
+  left: 58% !important;
+  transform: translateX(-58%) !important;
+}
+
+
+.food-demo-slider-control .slider-arrow {
+  background: var(--white);
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 50%;
+  left: 42%;
+  transform: translateX(-42%);
+  filter: drop-shadow(0px 8px 24px rgba(18, 28, 53, 0.1));
+}
+
+.food-demo-slider-control .slider-arrow ion-icon {
+  font-size: 2rem;
+  color: #222224;
+}
+
+.food-demo-slider-control .slider-arrow::after {
+  content: '';
+}
+
+.food-demo-slider-control .swiper-pagination {
+  position: relative;
+  width: 15rem;
+  bottom: 1rem;
+}
+
+.food-demo-slider-control .swiper-pagination .swiper-pagination-bullet {
+  filter: drop-shadow(0px 8px 24px rgba(18, 28, 53, 0.1));
+}
+
+.food-demo-slider-control .swiper-pagination .swiper-pagination-bullet-active {
+  background: var(--primary);
+}
+
+@media (max-width:500px) {
+  .food-demo-slide {
+    width: 28rem !important;
+    height: 36rem !important;
+  }
+  .food-demo-slide .food-demo-slide-img img {
+    width: 28rem !important;
+    height: 36rem !important;
+  }
+}
+
+
+@media (max-width:990px) {
+  .food-demo-slider-control .swiper-button-next {
+    left: 70% !important;
+    transform: translateX(-70%) !important;
+  }
+}
+
+@media (max-width:450px) {
+  .food-demo-slider-control .swiper-button-next {
+    left: 80% !important;
+    transform: translateX(-80%) !important;
+  }
+}
+
+@media (max-width:990px) {
+  .food-demo-slider-control .swiper-button-prev {
+    left: 30% !important;
+    transform: translateX(-30%) !important;
+  }
+}
+
+@media (max-width:450px) {
+  .food-demo-slider-control .swiper-button-prev {
+    left: 20% !important;
+    transform: translateX(-20%) !important;
+  }
+}
 
 @media screen and (max-width: 1500px) {
   .mobile-app {
