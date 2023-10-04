@@ -270,6 +270,10 @@ nav .home-nav ul li a.nav-link:hover {
   max-height: 500px;
 }
 
+.howwework {
+  background-color: #f7f7f7;
+}
+
 .how-work {
   padding-bottom: 70px;
 }
