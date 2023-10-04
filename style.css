@@ -2,27 +2,33 @@
   font-family: "Montserrat-Regular";
   src: url(./fonts/Montserrat-Regular.ttf);
 }
+
 @font-face {
   font-family: "Montserrat-Bold";
   src: url(./fonts/Montserrat-Bold.ttf);
 }
+
 @font-face {
   font-family: "Montserrat-SemiBold";
   src: url(./fonts/Montserrat-SemiBold.ttf);
 }
+
 @font-face {
   font-family: "Montserrat-Medium";
   src: url(./fonts/Montserrat-Medium.ttf);
 }
+
 @font-face {
   font-family: "Montserrat-Light";
   src: url(./fonts/Montserrat-Light.ttf);
 }
+
 body {
   display: block;
   overflow-x: hidden;
   font-family: "Montserrat-Regular";
 }
+
 .mobile-screen {
   background: url("images/phone.png") center no-repeat;
   margin: auto;
@@ -30,10 +36,12 @@ body {
   width: 400px;
   height: 800px;
 }
+
 .mobile-screen {
   display: block;
   margin: auto;
 }
+
 .logo {
   height: 150px;
   width: 150px;
@@ -42,6 +50,7 @@ body {
   background-size: cover;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
+
 .main-header {
   /* background-image: url(images/Main-Background.jpeg); */
   background-color: rgb(255, 255, 255);
@@ -49,14 +58,17 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
 }
+
 .main-header-special {
   background-color: #ffffff;
   height: 110px;
-  
+
 }
+
 .navbar-brand img {
   max-width: 150px;
 }
+
 .navbar-brand {
   font-size: 26px;
   text-transform: uppercase;
@@ -64,6 +76,7 @@ body {
   color: #7d0a10;
   width: 100px;
 }
+
 nav ul li a.nav-link {
   text-align: right;
   color: #000000;
@@ -73,11 +86,13 @@ nav ul li a.nav-link {
 }
 
 nav ul.navbar-nav li a.nav-link.active {
-  color: rgb(253,79,92);
+  color: rgb(253, 79, 92);
 }
+
 nav .home-nav ul.navbar-nav li a.nav-link.active {
-  color: rgb(253,79,92);
+  color: rgb(253, 79, 92);
 }
+
 nav ul.navbar-nav li a.nav-link.active::after {
   content: "";
   display: block;
@@ -88,15 +103,19 @@ nav ul.navbar-nav li a.nav-link.active::after {
   margin: auto;
   margin-top: 3px;
 }
+
 nav .home-nav ul.navbar-nav li a.nav-link.active::after {
-  background: rgb(253,79,92);
+  background: rgb(253, 79, 92);
 }
+
 nav ul li a.nav-link:hover {
   color: #d93a3f;
 }
+
 nav .home-nav ul li a.nav-link:hover {
   color: #f6cb00;
 }
+
 .main-header-special nav ul li a.nav-link {
   text-align: right;
   color: rgb(0, 0, 0);
@@ -104,6 +123,7 @@ nav .home-nav ul li a.nav-link:hover {
   margin: auto 18px;
   font-family: "Lora";
 }
+
 .main-header-special nav ul.navbar-nav li a.nav-link.active {
   color: #d93a3f;
 }
@@ -111,6 +131,7 @@ nav .home-nav ul li a.nav-link:hover {
 .main-header-special nav .home-nav ul.navbar-nav li a.nav-link.active {
   color: #f6cb00;
 }
+
 .main-header-special nav ul.navbar-nav li a.nav-link.active::after {
   content: "";
   display: block;
@@ -125,25 +146,32 @@ nav .home-nav ul li a.nav-link:hover {
 .main-header-special nav .home-nav ul.navbar-nav li a.nav-link.active::after {
   background: #f6cb00;
 }
+
 .main-header-special nav ul li a.nav-link:hover {
   color: #d93a3f;
 }
+
 .main-header-special nav .home-nav ul li a.nav-link:hover {
   color: #f6cb00;
 }
+
 .banner-content {
   padding-bottom: 50px;
 }
+
 .banner-text {
   padding-top: 180px;
 }
+
 .banner-content .carousel-inner {
   height: calc(100vh - 170px);
 }
+
 .banner-content .carousel-item {
   height: 100%;
   display: flex;
 }
+
 .slide-fade .carousel-item {
   opacity: 0;
   transition-duration: 1s;
@@ -169,26 +197,31 @@ nav .home-nav ul li a.nav-link:hover {
   transform: translateX(0);
   transform: translate3d(0, 0, 0);
 }
+
 .banner-text-sub {
   color: #000000;
   font-family: "Montserrat-Bold";
   font-size: 34px;
 }
+
 .banner-text-main {
   color: #000000;
   font-family: "Montserrat-Bold";
   font-size: 60px;
 }
+
 .banner-text-main-head {
   color: #f6cb00;
   font-family: "Montserrat-Bold";
   font-size: 58px;
 }
+
 .banner-text-info {
-  color: rgb(253,79,92);
+  color: rgb(253, 79, 92);
   font-family: "Montserrat-Regular";
   font-size: 18px;
 }
+
 .register-button {
   margin-top: 10px;
   border: none;
@@ -200,21 +233,24 @@ nav .home-nav ul li a.nav-link:hover {
   font-size: 16px;
   display: none;
 }
+
 .video-button {
   margin-top: 10px;
   border: none;
   border-radius: 10px;
-  background-color: rgb(253,79,92);
+  background-color: rgb(253, 79, 92);
   color: #ffffff;
   padding: 8px 14px;
   font-family: "Montserrat-Bold";
   font-size: 16px;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.5);
 }
+
 .banner-img {
   background: url("") center no-repeat;
   background-size: contain;
 }
+
 .banner-img img {
   display: block;
   width: 100%;
@@ -222,53 +258,64 @@ nav .home-nav ul li a.nav-link:hover {
   margin: 0px;
   padding-top: 52px;
 }
+
 .aboutus-sub-banner {
   background: url("images/Main-Background.jpeg") center no-repeat;
   background-size: cover;
   /* background-color: #d93a3f; */
 }
+
 .sub-banner-img {
   max-width: 100%;
   max-height: 500px;
 }
+
 .how-work {
   padding-bottom: 70px;
 }
+
 .how-work-text {
   text-align: center;
   padding-top: 70px;
 }
+
 .how-work-head {
   color: #d93a3f;
   font-family: "Montserrat-Light";
   font-size: 24px;
 }
+
 .how-work-sub-head {
   color: #000;
   font-family: "Montserrat-Bold";
   font-size: 26px;
 }
+
 .how-work-info {
   color: #000;
   font-size: 14px;
 }
+
 .how-work-content {
   background: url("images/path-img.png") no-repeat;
   background-position-x: 37%;
   background-size: 67%;
 }
+
 .how-work-img {
   display: block;
   width: 120px;
   height: 120px;
   margin: auto;
 }
+
 .how-work-item-head {
   padding-top: 10px;
   text-align: center;
   font-family: "Montserrat-Bold";
   font-size: 22px;
 }
+
 .how-work-desc {
   padding-top: 8px;
   color: #000;
@@ -278,105 +325,130 @@ nav .home-nav ul li a.nav-link:hover {
   width: 255px;
   font-size: 14px;
 }
+
 .aboutus {
   background-color: #f7f7f7;
 }
+
 .about-us {
   padding-top: 50px;
   padding-bottom: 50px;
 }
+
 .about-us img {
   max-width: 100%;
 }
+
 .about-us-text {
   width: 75%;
   padding-top: 50px;
 }
+
 .about-us-head {
   color: #d93a3f;
   font-family: "Montserrat-Light";
   font-size: 26px;
 }
+
 .about-us-sub-head {
   color: #000;
   font-family: "Montserrat-Bold";
   font-size: 26px;
 }
+
 .about-us-content-1 {
   color: #000;
   font-size: 14px;
   text-align: justify;
   line-height: 28px;
 }
+
 .about-us-content-2 {
   color: #000;
   font-size: 14px;
   text-align: justify;
   line-height: 28px;
 }
+
 .about-app-img {
   padding-top: 35px;
 }
+
 .our-plan-text {
   text-align: center;
   padding-bottom: 30px;
 }
+
 .our-plan {
   padding-top: 50px;
 }
+
 .food-plan-row-1 {
   padding-bottom: 30px;
 }
+
 .food-plan-1 {
   background: url("images/food-plan-1.png") left no-repeat;
   height: 200px;
 }
+
 .food-plan-2 {
   background: url("images/food-plan-2.png") right no-repeat;
   height: 200px;
 }
+
 .food-plan-2 .food-plan-details,
 .food-plan-4 .food-plan-details {
   width: 380px;
   margin-left: auto;
 }
+
 .food-plan-3 {
   background: url("images/food-plan-3.png") left no-repeat;
   height: 200px;
 }
+
 .food-plan-4 {
   background: url("images/food-plan-4.png") right no-repeat;
   height: 200px;
 }
+
 .food-plan-details {
   padding-top: 35px;
   padding-left: 50px;
 }
+
 .food-plan-rate {
   color: #000;
   font-family: "Montserrat-Bold";
   font-size: 34px;
   margin-bottom: 3px;
 }
+
 .food-plan-month {
   color: #000;
   font-family: "Montserrat-Bold";
   font-size: 20px;
 }
+
 .food-plan-ul {
   padding-left: 0px;
 }
+
 .customise {
   color: #3a3a3a;
   padding-left: 90px;
 }
+
 .food-categories {
   padding-top: 70px;
   padding-bottom: 20px;
 }
+
 .food-categories-text {
   text-align: center;
 }
+
 .food-plan-ul li {
   font-family: "Montserrat-SemiBold";
   font-size: 16px;
@@ -388,22 +460,27 @@ nav .home-nav ul li a.nav-link:hover {
   padding-left: 30px;
   background-size: 18px;
 }
+
 .food-categories-content {
   padding-top: 20px;
   text-align: center;
 }
+
 .privacy-policy-head {
   color: #000;
   font-family: "Montserrat-Light";
   font-size: 26px;
 }
+
 .privacy-policy-content {
   padding-top: 20px;
   text-align: justify;
 }
+
 .privacy-policy-content p {
   line-height: 2;
 }
+
 .food-category {
   background-color: #f7f7f7;
   padding-top: 25px;
@@ -412,56 +489,69 @@ nav .home-nav ul li a.nav-link:hover {
   margin-bottom: 20px;
   box-shadow: 1px 1px 3px #cec7c7;
 }
+
 .food-category-name {
   padding: 0 5px;
 }
+
 .food-category:hover {
   background: linear-gradient(to top, #ff6702 20%, #d46124);
   color: #fff;
   cursor: pointer;
 }
+
 .text-yellow {
   color: #f6cb00;
 }
+
 .category-icon {
   color: #d93a3f;
   display: block;
   float: right;
   font-size: 20px;
 }
+
 .food-category:hover .category-icon {
   color: #fff;
 }
+
 .whychooseus {
   background-color: #faf5df;
   padding-bottom: 70px;
 }
+
 .why-choose-us-text {
   padding-top: 50px;
   text-align: center;
 }
+
 .why-choose-us-head {
   color: #d93a3f;
   font-family: "Montserrat-Light";
   font-size: 26px;
 }
+
 .why-choose-us-head-bold {
   color: #000;
   font-family: "Montserrat-Bold";
   font-size: 26px;
 }
+
 .why-choose-us-sub-head {
   color: #000;
   font-family: "Montserrat-Regular";
   font-size: 16px;
 }
+
 .why-choose-us-content {
   padding-top: 50px;
   text-align: center;
 }
+
 .why-choose-us-content-row-2 {
   padding-top: 70px;
 }
+
 .why-choose-item-name {
   font-size: 18px;
   font-family: "Montserrat-Bold";
@@ -472,6 +562,7 @@ nav .home-nav ul li a.nav-link:hover {
   margin: auto;
   line-height: 25px;
 }
+
 .why-choose-item-desc {
   font-size: 14px;
   font-family: "Montserrat-Regular";
@@ -480,22 +571,27 @@ nav .home-nav ul li a.nav-link:hover {
   margin: auto;
   line-height: 25px;
 }
+
 .tension-free-content {
   padding-bottom: 70px;
 }
+
 .tension-free-text {
   margin-top: 70px;
 }
+
 .tension-free-head {
   color: #d93a3f;
   font-family: "Montserrat-Light";
   font-size: 26px;
 }
+
 .tension-free-sub-head {
   color: #000;
   font-family: "Montserrat-Bold";
   font-size: 26px;
 }
+
 .tension-free-desc {
   padding-top: 10px;
   color: #000;
@@ -505,11 +601,13 @@ nav .home-nav ul li a.nav-link:hover {
   max-width: 100%;
   line-height: 30px;
 }
+
 .tension-free-ul {
   padding-top: 5px;
   padding-left: 0px;
   display: block;
 }
+
 .tension-free-ul li {
   font-family: "Montserrat-Bold";
   font-size: 18px;
@@ -521,32 +619,38 @@ nav .home-nav ul li a.nav-link:hover {
   padding-left: 30px;
   background-size: 18px;
 }
+
 .mobile-app {
   background-image: url("images/delivery-banner.png");
   height: 100%;
   background-repeat: no-repeat;
   padding-bottom: 150px;
 }
+
 .mobile-app-text {
   width: 50%;
   margin-left: auto;
   padding-top: 150px;
 }
+
 .mobile-app-main-head {
   font-size: 26px;
   font-family: "Montserrat-Light";
   color: #d93a3f;
 }
+
 .mobile-app-head {
   font-size: 34px;
   font-family: "Montserrat-Bold";
   color: #000;
 }
+
 .mobile-app-sub-head {
   font-size: 34px;
   font-family: "Montserrat-Bold";
   color: #000;
 }
+
 .mobile-app-desc {
   padding-top: 5px;
   width: 400px;
@@ -555,6 +659,7 @@ nav .home-nav ul li a.nav-link:hover {
   font-family: "Montserrat-Medium";
   font-size: 18px;
 }
+
 .mobile-app-button {
   margin-top: 5px;
   border: none;
@@ -565,19 +670,24 @@ nav .home-nav ul li a.nav-link:hover {
   font-family: "Montserrat-Bold";
   font-size: 14px;
 }
+
 .mobile-app-button i {
   color: #fff;
   padding-right: 5px;
 }
+
 .footer {
   background-color: #363636;
 }
+
 .footer-social {
   padding-top: 50px;
 }
+
 .social-icons-head {
   color: #fff;
 }
+
 .social-icons a,
 .mail-icon {
   margin-left: 10px;
@@ -590,12 +700,14 @@ nav .home-nav ul li a.nav-link:hover {
   text-align: center;
   vertical-align: top;
 }
+
 .mail-icon {
   margin-left: 0;
   font-size: 13px;
   padding-top: 2px;
   margin-right: 8px;
 }
+
 .social-icons a i {
   color: #fff;
 }
@@ -603,6 +715,7 @@ nav .home-nav ul li a.nav-link:hover {
 .social-icons {
   margin-top: 20px;
 }
+
 .footer-address {
   padding-top: 50px;
 }
@@ -613,10 +726,12 @@ nav .home-nav ul li a.nav-link:hover {
   font-size: 18px;
   font-family: "Montserrat-Bold";
 }
+
 ul.quick-links,
 .features ul {
   padding-left: 0px;
 }
+
 .quick-links li {
   padding-left: 0px;
   list-style: none;
@@ -625,6 +740,7 @@ ul.quick-links,
   font-family: "Montserrat-Medium";
   line-height: 28px;
 }
+
 .features ul li {
   padding-left: 1px;
   color: #e6e4e4;
@@ -632,50 +748,61 @@ ul.quick-links,
   font-family: "Montserrat-Medium";
   line-height: 28px;
 }
+
 .thecompany {
   padding-bottom: 70px;
 }
+
 .company {
   padding-top: 70px;
 }
+
 .company-text {
   width: 90%;
 }
+
 .company-head {
   color: #d93a3f;
   font-family: "Montserrat-Light";
   font-size: 24px;
 }
+
 .company-sub-head {
   color: #000;
   font-family: "Montserrat-Bold";
   font-size: 26px;
 }
+
 .company-content-1 {
   color: #000;
   font-size: 14px;
   text-align: justify;
   line-height: 28px;
 }
+
 .company-content-2 {
   color: #000;
   font-size: 14px;
   text-align: justify;
   line-height: 28px;
 }
+
 .company-img {
   padding-bottom: 20px;
   width: 100%;
   max-width: 620px;
   height: 340px;
 }
+
 .events-news {
   padding-top: 100px;
   padding-bottom: 100px;
 }
+
 .events-news-content {
   padding-bottom: 80px;
 }
+
 .events-img img {
   width: 360px;
   box-shadow: 1px 1px 3px #cec7c7;
@@ -704,7 +831,7 @@ ul.quick-links,
 .download-button {
   border: none;
   color: #000;
-  background: rgb(253,79,92);
+  background: rgb(253, 79, 92);
   padding: 5px 12px;
   border-radius: 50px;
   font-weight: 600;
@@ -716,6 +843,7 @@ ul.quick-links,
   color: #fff;
   background: #47d93a;
 }
+
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;
@@ -726,9 +854,11 @@ input::-webkit-inner-spin-button {
 input[type="number"] {
   -moz-appearance: textfield;
 }
+
 .subscribe-container button i {
   margin-left: 10px;
 }
+
 .download-button i {
   margin-right: 10px;
 }
@@ -741,6 +871,7 @@ input[type="number"] {
   font-size: 24px;
   font-weight: 600;
 }
+
 .phone-icon img {
   width: 22px;
   margin-right: 8px;
@@ -751,6 +882,7 @@ input[type="number"] {
   line-height: 19px;
   margin-bottom: 8px;
 }
+
 .tension-free-img img {
   max-width: 100%;
 }
@@ -773,62 +905,78 @@ input[type="number"] {
 .features ul {
   padding-left: 12px;
 }
+
 .navbar-toggler {
-  color: rgb(253,79,92);
+  color: rgb(253, 79, 92);
   font-size: 30px;
   outline: none;
   border: none;
 }
+
 .navbar-toggler:focus {
   box-shadow: none;
 }
+
 .call-us-nav-item {
   margin-top: 8px;
 }
+
 /* .about-banner-text {
     padding-top: 80px;
 
   } */
 
-  /* WhatsApp Widget Styles */
+/* WhatsApp Widget Styles */
 .whatsapp-widget {
   position: fixed;
-  bottom: 20px; /* Adjust the distance from the bottom */
-  right: 20px; /* Adjust the distance from the right */
-  z-index: 1000; /* Ensure it appears above other elements */
+  bottom: 20px;
+  /* Adjust the distance from the bottom */
+  right: 20px;
+  /* Adjust the distance from the right */
+  z-index: 1000;
+  /* Ensure it appears above other elements */
 }
 
 .whatsapp-widget a {
   display: block;
-  width: 60px; /* Adjust the width as needed */
-  height: 60px; /* Adjust the height as needed */
+  width: 60px;
+  /* Adjust the width as needed */
+  height: 60px;
+  /* Adjust the height as needed */
   /* WhatsApp green color */
   border-radius: 50%;
   text-align: center;
-  line-height: 60px; /* Center the WhatsApp icon vertically */
-  color: #fff; /* Icon color */
-  font-size: 24px; /* Icon size */
+  line-height: 60px;
+  /* Center the WhatsApp icon vertically */
+  color: #fff;
+  /* Icon color */
+  font-size: 24px;
+  /* Icon size */
   text-decoration: none;
   transition: background-color 0.3s ease;
 }
 
 .whatsapp-widget img {
-  background-size: auto; /* Hover color */
+  background-size: auto;
+  /* Hover color */
 }
 
 .whatsapp-widget a:hover {
-  background-color: #128c7e; /* Hover color */
+  background-color: #128c7e;
+  /* Hover color */
 }
+
 /* End WhatsApp Widget Styles */
 
 .card-text-blocks {
- position: relative;
- width: 50px;
- color: #8b0d0d;
- display: grid;
- font-family: 'Lora', serif;
- font-size: 3vh;
+  position: relative;
+  width: 50px;
+  color: #8b0d0d;
+  display: grid;
+  font-family: 'Lora', serif;
+  font-size: 3vh;
 }
+
 .btn-bg-green {
   background-color: #ff9900;
 }
@@ -843,14 +991,18 @@ input[type="number"] {
   justify-content: center;
   align-items: center;
   height: auto;
-  padding: 2rem 0; /* Adjust padding as needed */
+  padding: 2rem 0;
+  /* Adjust padding as needed */
 }
 
 /* Adjust the slide width and height for larger screens */
 .food-demo-slide {
-  width: 80%; /* Adjust as needed */
-  max-width: 37rem; /* Adjust as needed */
-  height: 42rem; /* Adjust as needed */
+  width: 80%;
+  /* Adjust as needed */
+  max-width: 37rem;
+  /* Adjust as needed */
+  height: 42rem;
+  /* Adjust as needed */
   position: relative;
   margin: 0 auto;
 }
@@ -858,7 +1010,8 @@ input[type="number"] {
 /* Adjust slide dimensions for medium-sized screens */
 @media (max-width: 768px) {
   .food-demo-slide {
-    width: 90%; /* Adjust for medium screens */
+    width: 90%;
+    /* Adjust for medium screens */
     max-width: none;
     height: auto;
   }
@@ -867,7 +1020,8 @@ input[type="number"] {
 /* Adjust slide dimensions for smaller screens */
 @media (max-width: 500px) {
   .food-demo-slide {
-    width: 100%; /* Adjust for small screens */
+    width: 100%;
+    /* Adjust for small screens */
     height: auto;
   }
 }
@@ -909,6 +1063,7 @@ input[type="number"] {
   height: 42rem;
   position: relative;
 }
+
 .food-demo-slide .food-demo-slide-img img {
   width: 37rem;
   height: 42rem;
@@ -1005,6 +1160,7 @@ input[type="number"] {
     width: 28rem !important;
     height: 36rem !important;
   }
+
   .food-demo-slide .food-demo-slide-img img {
     width: 28rem !important;
     height: 36rem !important;
@@ -1045,54 +1201,67 @@ input[type="number"] {
     background-position: center;
   }
 }
+
 @media screen and (max-width: 992px) {
   .main-section {
     overflow: hidden;
   }
+
   .main-header-special {
     height: auto;
   }
+
   .watch-button-mobile {
     margin-left: 8px;
   }
+
   .mobile-app {
     background-position-x: 30%;
     background-size: cover;
   }
+
   .navbar-brand img {
     max-width: unset;
     width: 100px;
     margin-bottom: 0;
     margin-top: 20px;
   }
+
   nav ul li a.nav-link,
   .main-header-special nav ul li a.nav-link {
     font-size: 20px;
     text-align: left;
   }
+
   nav ul.navbar-nav li a.nav-link.active::after,
   .main-header-special nav ul.navbar-nav li a.nav-link.active::after {
     display: none;
   }
+
   .banner-img img {
     display: block;
     max-width: 100%;
     max-height: 88%;
     margin: auto;
-   
+
   }
+
   .banner-content .carousel-inner {
     height: calc(100vh - 600px);
   }
+
   .banner-text {
     padding-top: 20px;
   }
+
   .call-us-nav-item {
     display: none;
   }
+
   .how-work-content {
     background: none;
   }
+
   .food-plan-1,
   .food-plan-2,
   .food-plan-3,
@@ -1101,74 +1270,95 @@ input[type="number"] {
     height: 225px;
     margin-bottom: 15px;
   }
+
   .food-plan-details {
     padding-top: 45px;
   }
+
   .food-plan-row-1 {
     padding-bottom: 0;
   }
+
   .food-plan-2 .food-plan-details,
   .food-plan-4 .food-plan-details {
     padding-left: 150px;
   }
+
   .about-us-text {
     margin: auto;
   }
+
   .mobile-app-text {
     width: 100%;
   }
+
   .mobile-app {
     background-position-x: 100%;
   }
+
   .mobile-app {
     background-position-x: 100%;
     background-size: auto;
     padding: 50px 0px;
   }
+
   .mobile-app-text,
   .why-choose-us-content-row-2 {
     padding-top: 0;
   }
+
   .food-categories {
     padding-bottom: 20px;
   }
+
   .about-us-text {
     padding-top: 20px;
   }
+
   .about-app-img div {
     width: 130px;
   }
+
   .why-choose-item-desc {
     margin-bottom: 25px;
   }
+
   .subscribe-container input {
     display: block;
     width: 100%;
     margin: 15px 0;
   }
+
   .social-icons {
     margin-top: 0;
   }
+
   .address {
     margin-bottom: 30px;
   }
+
   .register-button {
     font-size: 14px;
   }
+
   #demo {
     width: 100%;
     margin: auto;
     background-size: 80%;
   }
+
   .how-work-desc {
     margin-bottom: 25px;
   }
+
   .how-work {
     padding-bottom: 35px;
   }
+
   .how-work-info {
     margin-bottom: 0;
   }
+
   .tension-free-text {
     margin-top: 50px;
   }
@@ -1179,12 +1369,14 @@ input[type="number"] {
     font-size: 14px;
     line-height: 22px;
   }
+
   .food-plan-1,
   .food-plan-2,
   .food-plan-3,
   .food-plan-4 {
     height: 145px;
   }
+
   .food-plan-details {
     padding-top: 8px;
   }
