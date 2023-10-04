@@ -1,4 +1,4 @@
-var TrandingSlider = new Swiper('.tranding-slider', {
+var TrandingSlider = new Swiper('.food-demo-slider', {
     effect: 'coverflow',
     grabCursor: true,
     centeredSlides: true,
