@@ -14,6 +14,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Lora:ital@1&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./style.css" />
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
   <script>
     $(document).ready(function () {
       $(".main-section").hide();
@@ -93,6 +95,21 @@
       background-color: #000;
     }
   </style>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const swiper = new Swiper('.swiper-container', {
+        // Optional: Add pagination dots (you can customize this)
+        pagination: {
+          el: '.swiper-pagination',
+        },
+        // Optional: Add navigation buttons (if not added in HTML)
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        },
+      });
+    });
+  </script>
 </head>
 
 <body>
@@ -149,18 +166,21 @@
       <div class="container banner-content">
         <div class="row">
           <div class="col-lg-5 banner-text d-none d-lg-block">
-            <h4 class="banner-text-sub">#Mess Service Providers</h4>
-            <h3 class="banner-text-main">Satisfying Breakfast</h3>
+            <h4 class="banner-text-sub" style="color: black;">Your Favourite Mess Service Providers</h4>
+            <h3 class="banner-text-main"><span
+                style="background-color: rgb(253,79,92); font-style: italic;">Satisfying</span> <span
+                style="color: black"> Food</span></h3>
+
             <h3 class="banner-text-main-head"> at your Doorstep</h3>
-            <p class="banner-text-info">
+            <p class="banner-text-info" style="color: rgb(253,79,92);">
               Break your fast with Namma Mess !
             </p>
-            <button class="register-button">Register Now!</button>
-            <button type="button" class="video-button" data-bs-toggle="modal" data-bs-target="#exampleModal"
+            <button class="video-button">Order Now!</button>
+            <!-- <button type="button" class="video-button" data-bs-toggle="modal" data-bs-target="#exampleModal"
               id="btn_vid">
               <a href="https://docs.google.com/forms/d/e/1FAIpQLScuzbJr06DSyZ6NI3alrH655MQAJgeBVyD4t_yOO4K1IF8awQ/viewform?embedded=true" target="_blank">
               Drop your feedback </a>
-            </button>
+            </button> -->
             <!-- Modal -->
             <!-- <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
               aria-hidden="true">
@@ -176,14 +196,13 @@
             </div> -->
           </div>
 
-          <div id="demo" class="col-lg-7 banner-img carousel slide slide-fade" data-bs-ride="carousel"
-            data-bs-pause="false">
+          <div id="demo" class="col-lg-7 banner-img">
             <!-- The slideshow/carousel -->
-            <div class="carousel-inner">
-              <div class="carousel-item active" data-bs-interval="4000" data-bs-delay="1000">
-                <img src="images/banners/puttu-kadala.png" alt="Breakfast" class="d-block" />
-              </div>
-              <div class="carousel-item" data-bs-interval="4000">
+
+
+            <img src="images/banners/take-away.svg" alt="Breakfast" class="d-block" />
+
+            <!-- <div class="carousel-item" data-bs-interval="4000">
                 <img src="images/banners/masala-dosa.png" alt="Lunch" class="d-block" />
               </div>
               <div class="carousel-item" data-bs-interval="4000">
@@ -191,23 +210,25 @@
               </div>
               <div class="carousel-item" data-bs-interval="4000">
                 <img src="images/banners/Mess-Banners4.png" alt="Dinner" class="d-block" />
-              </div>
-            </div>
+              </div> -->
+
           </div>
 
           <div class="col-lg-5 banner-text d-block d-lg-none">
-            <h4 class="banner-text-sub">Online Mess</h4>
-            <h3 class="banner-text-main">Satisfying Breakfast</h3>
+            <h4 class="banner-text-sub">Your Favourite Mess Service Providers</h4>
+            <h3 class="banner-text-main"><span
+                style="background-color: rgb(253,79,92); font-style: italic;">Satisfying</span> <span
+                style="color: black"> Food</span></h3>
             <h3 class="banner-text-main-head">at your Doorstep</h3>
             <p class="banner-text-info">
               Why waste food, when you have a option to make a choice !
             </p>
             <div class="d-flex">
-              <button class="register-button">Register Now!</button>
-              <button type="button" class="video-button watch-button-mobile" data-bs-toggle="modal"
+              <button class="video-button">Register Now!</button>
+              <!-- <button type="button" class="video-button watch-button-mobile" data-bs-toggle="modal"
                 data-bs-target="#exampleModal" id="btn_vid">
-                <i class="fa-solid fa-video"></i> About NammaMess
-              </button>
+                <i class="fa-solid fa-video"></i>Order Now
+              </button> -->
             </div>
             <!-- Modal -->
             <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
@@ -261,6 +282,171 @@
       </div>
     </section>
 
+
+    <section id="food-demo">
+      <div class="container">
+        <h3 class="text-center section-subheading">- Popular Delivery -</h3>
+        <h1 class="text-center section-heading">Food Menu</h1>
+      </div>
+      <div class="container">
+        <div class="swiper food-demo-slider">
+          <div class="swiper-wrapper">
+            <!-- Slide-start -->
+            <div class="swiper-slide food-demo-slide">
+              <div class="food-demo-slide-img">
+                <img src="images/banners/idlivada.png" alt="food-demo">
+              </div>
+              <div class="food-demo-slide-content">
+
+                <div class="food-demo-slide-content-bottom">
+                  <h2 class="food-name">
+                    Special Pizza
+                  </h2>
+                  <h3 class="food-rating">
+                    <span>4.5</span>
+
+                  </h3>
+                </div>
+              </div>
+            </div>
+            <!-- Slide-end -->
+            <!-- Slide-start -->
+            <div class="swiper-slide food-demo-slide">
+              <div class="food-demo-slide-img">
+                <img src="images/banners/masala-dosa.png" alt="food-demo">
+              </div>
+              <div class="food-demo-slide-content">
+
+                <div class="food-demo-slide-content-bottom">
+                  <h2 class="food-name">
+                    Meat Ball
+                  </h2>
+                  <h3 class="food-rating">
+                    <span>4.5</span>
+
+                  </h3>
+                </div>
+              </div>
+            </div>
+            <!-- Slide-end -->
+            <!-- Slide-start -->
+            <div class="swiper-slide food-demo-slide">
+              <div class="food-demo-slide-img">
+                <img src="images/banners/Mess-Banners4.png" alt="food-demo">
+              </div>
+              <div class="food-demo-slide-content">
+
+                <div class="food-demo-slide-content-bottom">
+                  <h2 class="food-name">
+                    Burger
+                  </h2>
+                  <h3 class="food-rating">
+                    <span>4.5</span>
+
+                  </h3>
+                </div>
+              </div>
+            </div>
+            <!-- Slide-end -->
+            <!-- Slide-start -->
+            <div class="swiper-slide food-demo-slide">
+              <div class="food-demo-slide-img">
+                <img src="images/banners/puttu-kadala.png" alt="food-demo">
+              </div>
+              <div class="food-demo-slide-content">
+
+                <div class="food-demo-slide-content-bottom">
+                  <h2 class="food-name">
+                    Frish Curry
+                  </h2>
+                  <h3 class="food-rating">
+                    <span>4.5</span>
+
+                  </h3>
+                </div>
+              </div>
+            </div>
+            <!-- Slide-end -->
+            <!-- Slide-start -->
+            <div class="swiper-slide food-demo-slide">
+              <div class="food-demo-slide-img">
+                <img src="images/banners/Mess-Banners4.png" alt="food-demo">
+              </div>
+              <div class="food-demo-slide-content">
+
+                <div class="food-demo-slide-content-bottom">
+                  <h2 class="food-name">
+                    Pane Cake
+                  </h2>
+                  <h3 class="food-rating">
+                    <span>4.5</span>
+
+                  </h3>
+                </div>
+              </div>
+            </div>
+            <!-- Slide-end -->
+            <!-- Slide-start -->
+            <div class="swiper-slide food-demo-slide">
+              <div class="food-demo-slide-img">
+                <img src="images/banners/masala-dosa.png" alt="food-demo">
+              </div>
+              <div class="food-demo-slide-content">
+                <div class="food-demo-slide-content-bottom">
+                  <h2 class="food-name">
+                    Vanilla cake
+                  </h2>
+                  <h3 class="food-rating">
+                    <span>4.5</span>
+
+                  </h3>
+                </div>
+              </div>
+            </div>
+            <!-- Slide-end -->
+            <!-- Slide-start -->
+            <!-- <div class="swiper-slide food-demo-slide">
+              <div class="food-demo-slide-img">
+                <img src="images/food-demo-food-1.png" alt="food-demo">
+              </div>
+              <div class="food-demo-slide-content">
+                <h1 class="food-price">$8</h1>
+                <div class="food-demo-slide-content-bottom">
+                  <h2 class="food-name">
+                    Straw Cake
+                  </h2>
+                  <h3 class="food-rating">
+                    <span>4.5</span>
+                    <div class="rating">
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                    </div>
+                  </h3>
+                </div>
+              </div>
+            </div> -->
+            <!-- Slide-end -->
+          </div>
+
+          <div class="food-demo-slider-control">
+            <div class="swiper-button-prev slider-arrow">
+              <ion-icon name="arrow-back-outline"></ion-icon>
+            </div>
+            <div class="swiper-button-next slider-arrow">
+              <ion-icon name="arrow-forward-outline"></ion-icon>
+            </div>
+            <div class="swiper-pagination"></div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+
     <section class="foodcategories">
       <div class="container food-categories">
         <div class="food-categories-text">
@@ -295,14 +481,14 @@
         </div>
       </div>
     </section>
-  
+
     <div class="container">
       <section class="mb-6 text-center">
         <div class="row gx-lg-5">
-  
+
           <!-- First column -->
           <div class="col-lg-4 col-md-12 mb-6 mb-lg-0">
-  
+
             <div class="card rounded-6 h-100">
               <div class="bg-image hover-overlay ripple mx-3 shadow-4-strong rounded-6 mt-n3"
                 data-mdb-ripple-color="light">
@@ -332,17 +518,18 @@
                   class="btn btn-primary btn-rounded btn-bg-green">Book your slot now</a>
               </div>
             </div>
-  
+
           </div>
           <!-- First column -->
-  
+
           <!-- Second column -->
           <div class="col-lg-4 mb-6 mb-lg-0">
-  
+
             <div class="card rounded-6 h-100">
               <div class="bg-image hover-overlay ripple mx-3 shadow-4-strong rounded-6 mt-n3"
                 data-mdb-ripple-color="light">
-                <img src="images/cards/lunch-card.png" class="img-fluid" style=" max-width: 300px; max-height: 300px;" />
+                <img src="images/cards/lunch-card.png" class="img-fluid"
+                  style=" max-width: 300px; max-height: 300px;" />
                 <a href="#!">
                   <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
                 </a>
@@ -363,13 +550,13 @@
                   class="btn btn-primary btn-rounded btn-bg-green">Connect with us</a>
               </div>
             </div>
-  
+
           </div>
           <!-- Second column -->
-  
+
           <!-- Third column -->
           <div class="col-lg-4 mb-6 mb-lg-0">
-  
+
             <div class="card rounded-6 h-100">
               <div class="bg-image hover-overlay ripple mx-3 shadow-4-strong rounded-6 mt-n3"
                 data-mdb-ripple-color="light">
@@ -392,7 +579,7 @@
                   class="btn btn-primary btn-rounded btn-bg-green">Connect with us</a>
               </div>
             </div>
-  
+
           </div>
         </div>
         <!-- Third column -->
@@ -410,7 +597,12 @@
               <h3 class="about-us-head">About</h3>
               <h3 class="about-us-sub-head">NammaMess</h3>
               <p class="about-us-content-1">
-                NammaMess is an online food delivery application created by a group of engineers who personally experienced the challenges of maintaining regular meal schedules due to their work commitments. Recognizing that this issue is not unique to them, but also affects many others, they have developed a convenient solution. Our platform offers a pre-paid subscription plan that provides customers with three daily meals: Breakfast, Lunch, and Dinner, ensuring a consistent and hassle-free dining experience throughout the month.
+                NammaMess is an online food delivery application created by a group of engineers who personally
+                experienced the challenges of maintaining regular meal schedules due to their work commitments.
+                Recognizing that this issue is not unique to them, but also affects many others, they have developed a
+                convenient solution. Our platform offers a pre-paid subscription plan that provides customers with three
+                daily meals: Breakfast, Lunch, and Dinner, ensuring a consistent and hassle-free dining experience
+                throughout the month.
               </p>
               <!-- <p class="about-us-content-2">
                   NammaMess in coordination with the local Government
@@ -707,6 +899,10 @@
 
     </a>
   </div>
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+  <script src="script.js"></script>
 </body>
 
 </html>
