@@ -1058,7 +1058,7 @@ input[type="number"] {
 
 @media (max-width:500px) {
   #food-demo .food-demo-slider {
-    height: 45rem;
+    height: 38rem;/*changes made 45rem to */
   }
 }
 
@@ -1167,7 +1167,7 @@ input[type="number"] {
 
   .food-demo-slide .food-demo-slide-img img {
     width: 28rem !important;
-    height: 36rem !important;
+    height: 27rem !important;
   }
 }
 
@@ -1383,5 +1383,41 @@ input[type="number"] {
 
   .food-plan-details {
     padding-top: 8px;
+  }
+}
+
+@media (max-width: 576px) {
+  .food-demo-slide .food-demo-slide-content {
+    background-color: white;
+    position: relative;
+    margin-left: 2rem;
+    left: auto;
+    top: auto;
+    right: auto;
+    bottom: auto;
+  }
+  .swiper-slide{
+    margin: bottom 12px x; ;
+  }
+  .food-demo-slide-content .food-name {
+    border-radius: 4px;
+    background-color: white;
+    top: 1rem; 
+    right: 1rem; 
+  }
+
+  .food-categories {
+    padding-top: 0px;
+    padding-bottom: 20px;
+}
+ 
+.food-rating {
+  position:absolute;
+  background-color: white;
+  border-radius: 4px;
+  margin-top: -9px;
+}
+  #food-demo {
+    padding: 5rem 0;
   }
 }
