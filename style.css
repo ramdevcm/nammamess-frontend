@@ -45,7 +45,6 @@ body {
 .logo {
   height: 150px;
   width: 150px;
-  background-image: url(images/Logo/NammaMess-red-logo.svg);
   background-repeat: no-repeat;
   background-size: cover;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -260,7 +259,7 @@ nav .home-nav ul li a.nav-link:hover {
 }
 
 .aboutus-sub-banner {
-  background: url("images/Main-Background.jpeg") center no-repeat;
+  /* background: url("images/Main-Background.jpeg") center no-repeat; */
   background-size: cover;
   /* background-color: #d93a3f; */
 }

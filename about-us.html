@@ -51,7 +51,7 @@
       <nav class="py-2 navbar navbar-expand-lg auto-hiding-navbar">
         <div class="container">
           <a class="navbar-brand" href="./index.html">
-            <img class="logo" src="images/Logo//NammaMess-red-logo.svg" />
+            <img class="logo" src="images/Logo/NammaMess-red-logo.svg" />
           </a>
           <button
             class="navbar-toggler text-dark"
@@ -399,12 +399,19 @@
               </div>
             </div>
             <div class="col-lg-6 subscribe-container">
-              <input type="text" placeholder="Name" />
-              <input type="number" placeholder="Mobile" />
-              <button>
-                Subscribe <i class="fa-regular fa-circle-down "></i>
-              </button>
+              <input type="text" id="nameInput" placeholder="Name" />
+              <input type="text" id="locationInput" placeholder="Location/Landmark" />
+              <button onclick="sendWhatsAppMessage()">Subscribe <i class="fa-regular fa-circle-down"></i></button>
             </div>
+            <script>
+              function sendWhatsAppMessage() {
+                var name = document.getElementById("nameInput").value;
+                var location = document.getElementById("locationInput").value;
+                var message = "Name: " + name + "\nLocation: " + location;
+                var whatsappUrl = "https://api.whatsapp.com/send?phone=918304917517&text=*Hey Nammamess Team*,%0AI want to know more about your mess service. %0AMy details are: %0A" + encodeURIComponent(message);
+                window.open(whatsappUrl);
+              }
+            </script>
           </div>
           <div class="row footer-address">
             <div class="col-lg-6">
