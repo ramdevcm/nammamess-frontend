@@ -443,9 +443,12 @@ nav .home-nav ul li a.nav-link:hover {
   color: #3a3a3a;
   padding-left: 90px;
 }
+.foodcategories {
+  padding-bottom: 40px;
+}
 
 .food-categories {
-  padding-top: 70px;
+  padding-top: 50px;
   padding-bottom: 20px;
 }
 
