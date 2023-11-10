@@ -26,7 +26,7 @@
     gtag('config', 'G-1RZ3FFZ9CK');
   </script>
   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-  <script>
+  <!-- <script>
     $(document).ready(function () {
       $(".main-section").hide();
       // $(".shutter-container").css("grid-gap", "0");
@@ -68,7 +68,46 @@
         }
       };
     });
-  </script>
+  </script> -->
+
+
+<script>
+  function openContactForm() {
+    var contactFormContainer = document.getElementById('contactFormContainer');
+    contactFormContainer.style.display = 'block';
+  }
+  function closeContactForm() {
+    var contactFormContainer = document.getElementById('contactFormContainer');
+    contactFormContainer.style.display = 'none';
+  }
+  function submitOrder() {
+    var phoneNumber = "918618281746";
+    var message = "*Hey Nammamess Team*, \nI would like to place orders. My details are mentioned below: \n" + getOrderDetails(); 
+    var whatsappApiUrl = "https://api.whatsapp.com/send?phone=" + phoneNumber + "&text=" + encodeURIComponent(message);
+
+    window.open(whatsappApiUrl, "_blank");
+
+    closeContactForm();
+  }
+
+  function getOrderDetails() {
+    var name = document.querySelector("#contactFormContainer input[name='Name']").value;
+    var location = document.querySelector("#contactFormContainer input[name='Location']").value;
+    var couponCode = document.querySelector("#contactFormContainer input[name='CouponCode']").value;
+    var message = document.querySelector("#contactFormContainer textarea[name='Message']").value;
+
+    var orderDetails = "Name: " + name + "\nLocation: " + location + "\nCoupon Code (if any): " + couponCode + "\nMessage (if any): " + message;
+
+    return orderDetails;
+  }
+
+  function closeContactForm() {
+    // Close the contact form popup
+    document.getElementById("contactFormContainer").style.display = "none";
+  }
+</script>
+
+
   <style>
     .carousel-item {
       transition: transform 5s ease-in-out;
@@ -123,126 +162,70 @@
 </head>
 
 <body>
-  <section class="shutter-box">
-    <div class="text-center w-100" id="mobileLogo" style="position: absolute; display: none; top: calc(50% - 102px)">
-      <img src="images/Logo/NammaMess-logo-300x300v2.gif" class="mobile-screen-img" />
-      <div class="mobile-screen" style="
-            display: none;
-            position: absolute;
-            top: calc(50% - 400px);
-            left: calc(50% - 200px);
-          "></div>
-    </div>
-    <div class="shutter-container">
-      <div class="shutter left"></div>
-      <div class="shutter right"></div>
-    </div>
-  </section>
-  <section class="main-section">
-    <div class="container-fluid main-header">
-      <nav class="py-2 navbar navbar-expand-lg auto-hiding-navbar">
-        <div class="container">
-          <a class="navbar-brand" href="./index.html">
-            <img class="logo" src="images/Logo/NammaMess-red-logo.svg" />
-          </a>
-          </a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-            aria-label="Toggle navigation">
-            <i class="fa-solid fa-bars"></i>
-          </button>
-          <div class="collapse navbar-collapse justify-content-end home-nav" id="navbarSupportedContent">
-            <ul class="navbar-nav ml-auto">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="./index.html">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="./plans.html">Plans</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="./about-us.html">About Us</a>
-              </li>
-              <!-- <li class="nav-item">
-                  <a class="nav-link" href="./features.html">Features</a>
-                </li> -->
-              <li class="nav-item call-us-nav-item">
-                <a href="tel: +91 83049 17517" class="download-button"><i class="fa-solid fa-phone"></i>Contact Us</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
-      <!-- End Navbar -->
-      <div class="container banner-content">
-        <div class="row">
-          <div class="col-lg-5 banner-text d-none d-lg-block">
-            <h4 class="banner-text-sub" style="color: black;">Your Favourite Mess Service Providers</h4>
-            <h3 class="banner-text-main"><span
-                style="background-color: rgb(253,79,92); font-style: italic;">Satisfying</span> <span
-                style="color: black"> Food</span></h3>
-
-            <h3 class="banner-text-main-head"> at your Doorstep</h3>
-            <p class="banner-text-info" style="color: rgb(253,79,92);">
-              Break your fast with Namma Mess !
-            </p>
-            <button class="video-button">Order Now!</button>
-            <!-- <button type="button" class="video-button" data-bs-toggle="modal" data-bs-target="#exampleModal"
-              id="btn_vid">
-              <a href="https://docs.google.com/forms/d/e/1FAIpQLScuzbJr06DSyZ6NI3alrH655MQAJgeBVyD4t_yOO4K1IF8awQ/viewform?embedded=true" target="_blank">
-              Drop your feedback </a>
-            </button> -->
-            <!-- Modal -->
-            <!-- <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
-              aria-hidden="true">
-              <div class="modal-dialog modal-dialog-centered">
-                <div class="modal-content">
-                  <div class="modal-body">
-                    <video width="100%" id="vid" height="100%" controls autoplay>
-                      <source src="videos/nammamess.mp4" type="video/mp4" />
-                    </video>
-                  </div>
-                </div>
-              </div>
-            </div> -->
-          </div>
-
-          <div id="demo" class="col-lg-7 banner-img">
-            <!-- The slideshow/carousel -->
-
-
-            <img src="images/banners/take-away.svg" alt="Breakfast" class="d-block" />
-
-            <!-- <div class="carousel-item" data-bs-interval="4000">
-                <img src="images/banners/masala-dosa.png" alt="Lunch" class="d-block" />
-              </div>
-              <div class="carousel-item" data-bs-interval="4000">
-                <img src="images/banners/idlivada.png" alt="Snacks" class="d-block" />
-              </div>
-              <div class="carousel-item" data-bs-interval="4000">
-                <img src="images/banners/Mess-Banners4.png" alt="Dinner" class="d-block" />
-              </div> -->
-
-          </div>
-
-          <div class="col-lg-5 banner-text d-block d-lg-none">
-            <h4 class="banner-text-sub">Your Favourite Mess Service Providers</h4>
-            <h3 class="banner-text-main"><span
-                style="background-color: rgb(253,79,92); font-style: italic;">Satisfying</span> <span
-                style="color: black"> Food</span></h3>
-            <h3 class="banner-text-main-head">at your Doorstep</h3>
-            <p class="banner-text-info">
-              Why waste food, when you have a option to make a choice !
-            </p>
-            <div class="d-flex">
-              <button class="video-button">Register Now!</button>
-              <!-- <button type="button" class="video-button watch-button-mobile" data-bs-toggle="modal"
-                data-bs-target="#exampleModal" id="btn_vid">
-                <i class="fa-solid fa-video"></i>Order Now
-              </button> -->
+    <section class="shutter-box">
+      <div class="text-center w-100" id="mobileLogo" style="position: absolute; display: none; top: calc(50% - 102px)">
+        <img src="images/Logo/NammaMess-logo-300x300v2.gif" class="mobile-screen-img" />
+        <div class="mobile-screen" style="display: none; position: absolute; top: calc(50% - 400px); left: calc(50% - 200px);"></div>
+      </div>
+      <div class="shutter-container">
+        <div class="shutter left"></div>
+        <div class="shutter right"></div>
+      </div>
+    </section>
+    
+    <section class="main-section">
+      <div class="container-fluid main-header">
+        <nav class="py-2 navbar navbar-expand-lg auto-hiding-navbar">
+          <div class="container">
+            <a class="navbar-brand" href="./index.html">
+              <img class="logo" src="images/Logo/NammaMess-red-logo.svg" />
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <i class="fa-solid fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end home-nav" id="navbarSupportedContent">
+              <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="./index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="./plans.html">Plans</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="./about-us.html">About Us</a>
+                </li>
+                <li class="nav-item call-us-nav-item">
+                  <a href="tel: +91 83049 17517" class="download-button"><i class="fa-solid fa-phone"></i>Contact Us</a>
+                </li>
+              </ul>
             </div>
+          </div>
+        </nav>
+    
+        <div class="container banner-content">
+          <div class="row">
+            <!-- this is for website view --> 
+            <div class="col-lg-5 banner-text d-none d-lg-block">
+              <h4 class="banner-text-sub" style="color: black;">Your Favourite Mess Service Providers</h4>
+              <h3 class="banner-text-main"><span style="background-color: rgb(253,79,92); font-style: italic;">Satisfying</span> <span style="color: black"> Food</span></h3>
+              <h3 class="banner-text-main-head"> at your Doorstep</h3>
+              <p class="banner-text-info" style="color: rgb(253,79,92);">
+                Break your fast with Namma Mess <br>
+                Why waste food when you have the option to make a choice!
+              </p>
+              <div class="d-flex">
+                <button class="video-button" onclick="openContactForm()"> Order Now! </button>
+
+                <button type="button" class="video-button watch-button-mobile" data-bs-toggle="modal" data-bs-target="#exampleModal" id="btn_vid">
+                  <i class="fa-solid fa-video"></i> About Us
+                </button>
+
+              </div>
+            </div>
+
             <!-- Modal -->
-            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
-              aria-hidden="true">
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
               <div class="modal-dialog modal-dialog-centered">
                 <div class="modal-content">
                   <div class="modal-body">
@@ -253,10 +236,96 @@
                 </div>
               </div>
             </div>
+    
+            <div id="demo" class="col-lg-7 banner-img">
+              <img src="images/banners/take-away.svg" alt="Breakfast" class="d-block" />
+            </div>
+
+            <!-- this is for mobile view --> 
+            <div class="col-lg-5 banner-text d-block d-lg-none">
+                <h4 class="banner-text-sub">Your Favourite Mess Service Providers</h4>
+                <h3 class="banner-text-main"><span
+                    style="background-color: rgb(253,79,92); font-style: italic;">Satisfying</span> <span
+                    style="color: black"> Food</span></h3>
+                <h3 class="banner-text-main-head">at your Doorstep</h3>
+                <p class="banner-text-info">
+                  Break your fast with Namma Mess <br>
+                  Why waste food when you have the option to make a choice!
+                </p>
+                <div class="d-flex">
+                  <button class="video-button" onclick="openContactForm()"> Order Now!  </button>
+                  <button type="button" class="video-button watch-button-mobile" data-bs-toggle="modal"
+                    data-bs-target="#exampleModal" id="btn_vid">
+                    <i class="fa-solid fa-video"></i> About Us
+                  </button>
+                </div>
+          </div>
+          <!-- Modal -->
+          <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content">
+                <div class="modal-body">
+                  <video width="100%" id="vid" height="100%" controls autoplay muted>
+                    <source src="videos/nammamess.mp4" type="video/mp4" />
+                  </video>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-    </div>
+
+      <div class="form-popup" id="contactFormContainer">
+        <div class="form-container">
+          <div class="text">
+            Contact Us
+          </div>
+      
+          <form action="#" onsubmit="submitOrder(); return false;"> <!-- Prevent the form from submitting normally -->
+            <div class="form-row">
+              <div class="input-data">
+                <input type="text" name="Name" required>
+                <div class="underline"></div>
+                <label for="">Name</label>
+              </div>
+              <div class="input-data">
+                <input type="text" name="Location" required>
+                <div class="underline"></div>
+                <label for="">Location/Locality</label>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="input-data">
+                <input type="text" name="CouponCode">
+                <div class="underline"></div>
+                <label for="">Coupon Code</label>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="input-data textarea">
+                <textarea rows="20" cols="80" name="Message"></textarea>
+                <br />
+                <div class="underline"></div>
+                <label for="">Write your message</label>
+                <br />
+                <div class="form-row submit-btn">
+                  <div class="input-data">
+                    <div class="inner"></div>
+                    <input type="submit" value="submit">
+                  </div>
+                  <div class="input-data">
+                    <div class="inner"></div>
+                    <input type="button" value="close" class="close-btn" onclick="closeContactForm()">Close</input>
+                  </div>
+                  
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+  
     <section class="howwework">
       <div class="container how-work">
         <div class="how-work-text">
@@ -293,7 +362,6 @@
     </section>
 
 
-
     <section class="foodcategories">
       <div class="container food-categories">
         <div class="food-categories-text">
@@ -301,31 +369,6 @@
             <span class="about-us-head">Food</span> Categories
           </h3>
         </div>
-        <!-- <div class="food-categories-content">
-          <div class="row justify-content-center">
-            <div class="col-md-6 col-lg-4">
-              <div class="food-category">
-                <div class="food-category-name" id="food-categories">
-                  Break fast<i class="fa-regular fa-circle-down  category-icon"></i>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-6 col-lg-4">
-              <div class="food-category">
-                <div class="food-category-name" id="food-categories">
-                  Lunch<i class="fa-regular fa-circle-down  category-icon"></i>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-6 col-lg-4">
-              <div class="food-category" id="food-categories">
-                <div class="food-category-name">
-                  Dinner<i class="fa-regular fa-circle-down  category-icon"></i>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div> -->
       </div>
     </section>
 
@@ -438,7 +481,6 @@
 
           </div>
         </div>
-        <!-- Third column -->
       </section>
     </div>
 
@@ -460,200 +502,19 @@
                 daily meals: Breakfast, Lunch, and Dinner, ensuring a consistent and hassle-free dining experience
                 throughout the month.
               </p>
-              <!-- <p class="about-us-content-2">
-                  NammaMess in coordination with the local Government
-                  authorities, will be taking part of the State Government’s
-                  Community Kitchen’ scheme.
-                </p> -->
+
               <div class="about-app-img d-flex justify-content-between">
                 <div class="">
                   <img src="images/coming-soon-app.png" />
                 </div>
-                <!-- <div class="">
-                  <img src="images/App-Store.png" />
-                </div> -->
               </div>
+
             </div>
           </div>
         </div>
       </div>
     </section>
-    <!-- <section class="foodcategories">
-        <div class="container food-categories">
-          <div class="food-categories-text">
-            <h3 class="about-us-sub-head">
-              <span class="about-us-head">Food</span> Categories
-            </h3>
-          </div>
-          <div class="food-categories-content">
-            <div class="row justify-content-center">
-              <div class="col-md-6 col-lg-4">
-                <div class="food-category">
-                  <div class="food-category-name">
-                    Break fast<i
-                      class="fa-regular fa-circle-down  category-icon"
-                    ></i>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-6 col-lg-4">
-                <div class="food-category">
-                  <div class="food-category-name">
-                    Lunch<i
-                      class="fa-regular fa-circle-down  category-icon"
-                    ></i>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-6 col-lg-4">
-                <div class="food-category">
-                  <div class="food-category-name">
-                    Dinner<i
-                      class="fa-regular fa-circle-down  category-icon"
-                    ></i>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-6 col-lg-4">
-                <div class="food-category">
-                  <div class="food-category-name">
-                    Snacks<i
-                      class="fa-regular fa-circle-down  category-icon"
-                    ></i>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-6 col-lg-4">
-                <div class="food-category">
-                  <div class="food-category-name">
-                    Juices<i
-                      class="fa-regular fa-circle-down  category-icon"
-                    ></i>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-6 col-lg-4">
-                <div class="food-category">
-                  <div class="food-category-name">
-                    Beverages<i
-                      class="fa-regular fa-circle-down  category-icon"
-                    ></i>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section> -->
-    <!-- <section class="mobileapp">
-        <div class="mobile-app">
-          <div class="container">
-            <div class="mobile-app-text">
-              <h3 class="mobile-app-main-head">NammaMess</h3>
-              <h3 class="mobile-app-head">We Care for Your Nutrition.</h3>
-              <h3 class="mobile-app-sub-head">Just like your Mother.</h3>
-              <p class="mobile-app-desc">
-                Say no to untimely eating schedule with NammaMess’s scheduled
-                and healthy food delivery
-              </p>
-              <button class="mobile-app-button">
-                <i class="fa fa-circle-arrow-down"></i>Download App
-              </button>
-            </div>
-          </div>
-        </div>
-      </section> -->
-    <!-- <section class="tensionfree">
-        <div class="container tension-free">
-          <div class="row tension-free-content">
-            <div class="col-lg-5 tension-free-text">
-              <h3 class="tension-free-head">BE TENSION FREE!</h3>
-              <h5 class="tension-free-sub-head">On-Time Delivery</h5>
-              <p class="tension-free-desc">
-                You have an option to edit the delivery time that suits your
-                schedule. Our fast delivery system will take care of all your
-                need.
-              </p>
-              <ul class="tension-free-ul">
-                <li>Free Delivery</li>
-                <li>Well Wrapped</li>
-                <li>Choose Your Delivery Time</li>
-              </ul>
-            </div>
-            <div class="col-lg-7 tension-free-img">
-              <img src="images/be-tension-free-img.png" />
-            </div>
-          </div>
-        </div>
-      </section> -->
-    <!-- <section class="whychooseus">
-        <div class="container why-choose-us">
-          <div class="why-choose-us-text">
-            <h3>
-              <span class="why-choose-us-head">Why</span>
-              <span class="why-choose-us-head-bold">Choose Us</span>
-            </h3>
-            <h6 class="why-choose-us-sub-head">
-              The best food for you at affordable prices
-            </h6>
-          </div>
-          <div class="why-choose-us-content">
-            <div class="row why-choose-us-content-row-1">
-              <div class="col-lg-4">
-                <img src="images/feature-img-1.png" />
-                <h3 class="why-choose-item-name">Personalized Plan</h3>
-                <p class="why-choose-item-desc">
-                  With our wide Menu and Affordable prices, you can personalize
-                  your order.
-                </p>
-              </div>
-              <div class="col-lg-4">
-                <img src="images/feature-img-2.png" />
-                <h3 class="why-choose-item-name">Free and on-time Delivery</h3>
-                <p class="why-choose-item-desc">
-                  Free delivery services at your doorstep. Choose the time and
-                  place of your food delivery.
-                </p>
-              </div>
-              <div class="col-lg-4">
-                <img src="images/feature-img-3.png" />
-                <h3 class="why-choose-item-name">
-                  Hygienic and Safe Packaging
-                </h3>
-                <p class="why-choose-item-desc">
-                  Each food item will have proper packaging to secure the
-                  delicacy of the food.
-                </p>
-              </div>
-            </div>
-            <div class="row why-choose-us-content-row-2">
-              <div class="col-lg-4">
-                <img src="images/feature-img-4.png" />
-                <h3 class="why-choose-item-name">Add-ons Facility</h3>
-                <p class="why-choose-item-desc">
-                  With NammaMess’s monthly subscription, add delicious dishes to
-                  the main menu, as per mood.
-                </p>
-              </div>
-              <div class="col-lg-4">
-                <img src="images/feature-img-5.png" />
-                <h3 class="why-choose-item-name">Meals for the Day</h3>
-                <p class="why-choose-item-desc">
-                  A single stop for your daily food requirements.
-                </p>
-              </div>
-              <div class="col-lg-4">
-                <img src="images/feature-img-6.png" />
-                <h3 class="why-choose-item-name">Easy Regulation with App</h3>
-                <p class="why-choose-item-desc">
-                  Track your orders and subscription with our easy-to-use mobile
-                  app.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section> -->
+
     <section class="footer">
       <div class="container">
         <div class="footer-box">
@@ -749,11 +610,11 @@
         </div>
         <div class="copyright">
           <div>Copyright &copy; 2023. NammaMess. All rights reserved.</div>
-          <img alt="counter" src="https://hits.sh/nammamess.in.svg?style=plastic&label=Yo"/>
+          <!-- <img alt="counter" src="https://hits.sh/nammamess.in.svg?style=plastic&label=Yo"/> -->
         </div>
       </div>
     </section>
-  </section>
+
   <div class="whatsapp-widget">
     <a href="https://api.whatsapp.com/send?phone=918618281746&text=*Hey Nammamess Team*,%0AI'm interested to know more about your mess service."
       target="_blank">
