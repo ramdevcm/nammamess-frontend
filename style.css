@@ -1612,3 +1612,9 @@ form .form-row .textarea{
     width: 40%!important;
   }
 }
+
+.location-icon {
+  height: 40px;
+  cursor: pointer;
+  margin-right: 5px; /* Adjust the margin as needed */
+}

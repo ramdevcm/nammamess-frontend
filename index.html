@@ -76,10 +76,30 @@
     var contactFormContainer = document.getElementById('contactFormContainer');
     contactFormContainer.style.display = 'block';
   }
+  21
   function closeContactForm() {
     var contactFormContainer = document.getElementById('contactFormContainer');
     contactFormContainer.style.display = 'none';
   }
+
+  function getLocation() {
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(showPosition);
+    } else { 
+      alert("Geolocation is not supported by this browser.");
+    }
+  }
+
+  function showPosition(position) {
+    const latitude = position.coords.latitude;
+    const longitude = position.coords.longitude;
+
+    // Create Google Maps URL
+    const mapsUrl = `https://maps.google.com/?q=${latitude},${longitude}`;
+    document.getElementById("locationInput").value = mapsUrl;
+
+  }
+
   function submitOrder() {
     var phoneNumber = "918618281746";
     var message = "*Hey Nammamess Team*, \nI would like to place orders. My details are mentioned below: \n" + getOrderDetails(); 
@@ -289,10 +309,13 @@
                 <label for="">Name</label>
               </div>
               <div class="input-data">
-                <input type="text" name="Location" required>
-                <div class="underline"></div>
+                <input type="text" name="Location" id="locationInput" required>
+                <div class="underline"></div> 
                 <label for="">Location/Locality</label>
               </div>
+              <div class="input-data location-placeholder">
+                <img src="images/location_icon.png" alt="map" class="location-icon" onclick="getLocation()">
+            </div>
             </div>
             <div class="form-row">
               <div class="input-data">
